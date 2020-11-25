@@ -30,7 +30,7 @@ impl Solution {
                         ans.push(res);
                     }
                     l += 1;
-                r -= 1;
+                    r -= 1;
                 } else if s > 0 {
                     r -= 1;
                 } else {
