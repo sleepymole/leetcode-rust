@@ -3,9 +3,7 @@ pub struct Solution;
 
 impl Solution {
     pub fn unique(mut x: Vec<Vec<i32>>) -> Vec<Vec<i32>> {
-        if x.is_empty() {
-            return x;
-        }
+        x.sort();
         let mut i = 0;
         for j in 1..x.len() {
             if x[j] != x[i] {
@@ -16,6 +14,7 @@ impl Solution {
         x.truncate(i + 1);
         x
     }
+
     pub fn three_sum(nums: Vec<i32>) -> Vec<Vec<i32>> {
         let mut nums = nums;
         nums.sort();
@@ -38,7 +37,6 @@ impl Solution {
                 }
             }
         }
-        ans.sort();
         Solution::unique(ans)
     }
 }
@@ -60,7 +58,6 @@ mod tests {
                 }
             }
         }
-        ans.sort();
         Solution::unique(ans)
     }
 
