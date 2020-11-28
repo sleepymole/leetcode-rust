@@ -18,3 +18,4 @@ mod p0018_4sum;
 mod p0019_remove_nth_node_from_end_of_list;
 mod p0020_valid_parentheses;
 mod p0021_merge_two_sorted_lists;
+mod p0022_generate_parentheses;
