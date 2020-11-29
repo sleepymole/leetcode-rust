@@ -36,6 +36,7 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use super::*;
+
     fn to_list(v: Vec<i32>) -> Option<Box<ListNode>> {
         let mut cur = None;
         for &x in v.iter().rev() {
