@@ -21,3 +21,4 @@ mod p0021_merge_two_sorted_lists;
 mod p0022_generate_parentheses;
 mod p0023_merge_k_sorted_lists;
 mod p0024_swap_nodes_in_pairs;
+mod p0025_reverse_nodes_in_k_group;
