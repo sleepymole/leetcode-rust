@@ -27,3 +27,4 @@ mod p0027_remove_element;
 mod p0028_implement_strstr;
 mod p0029_divide_two_integers;
 mod p0030_substring_with_concatenation_of_all_words;
+mod p0031_next_permutation;
