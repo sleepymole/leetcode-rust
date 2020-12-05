@@ -36,3 +36,4 @@ pub mod p0036_valid_sudoku;
 mod p0037_sudoku_solver;
 mod p0038_count_and_say;
 mod p0039_combination_sum;
+mod p0040_combination_sum_ii;
