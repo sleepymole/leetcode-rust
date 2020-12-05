@@ -37,3 +37,6 @@ mod p0037_sudoku_solver;
 mod p0038_count_and_say;
 mod p0039_combination_sum;
 mod p0040_combination_sum_ii;
+mod p0041_first_missing_positive;
+mod p0042_trapping_rain_water;
+mod p0043_multiply_strings;
