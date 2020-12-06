@@ -41,3 +41,7 @@ mod p0041_first_missing_positive;
 mod p0042_trapping_rain_water;
 mod p0043_multiply_strings;
 mod p0044_wildcard_matching;
+mod p0045_jump_game_ii;
+mod p0046_permutations;
+mod p0047_permutations_ii;
+mod p0048_rotate_image;
