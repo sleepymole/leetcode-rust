@@ -49,3 +49,6 @@ mod p0049_group_anagrams;
 mod p0050_powx_n;
 mod p0051_n_queens;
 mod p0052_n_queens_ii;
+mod p0053_maximum_subarray;
+mod p0054_spiral_matrix;
+mod p0055_jump_game;
