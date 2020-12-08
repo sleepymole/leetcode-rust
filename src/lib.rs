@@ -45,3 +45,4 @@ mod p0045_jump_game_ii;
 mod p0046_permutations;
 mod p0047_permutations_ii;
 mod p0048_rotate_image;
+mod p0049_group_anagrams;
