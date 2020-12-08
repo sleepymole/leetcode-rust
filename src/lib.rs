@@ -54,3 +54,6 @@ mod p0054_spiral_matrix;
 mod p0055_jump_game;
 mod p0056_merge_intervals;
 mod p0057_insert_interval;
+mod p0058_length_of_last_word;
+mod p0059_spiral_matrix_ii;
+mod p0060_permutation_sequence;
