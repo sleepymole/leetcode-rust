@@ -52,3 +52,5 @@ mod p0052_n_queens_ii;
 mod p0053_maximum_subarray;
 mod p0054_spiral_matrix;
 mod p0055_jump_game;
+mod p0056_merge_intervals;
+mod p0057_insert_interval;
