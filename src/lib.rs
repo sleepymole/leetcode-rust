@@ -46,3 +46,6 @@ mod p0046_permutations;
 mod p0047_permutations_ii;
 mod p0048_rotate_image;
 mod p0049_group_anagrams;
+mod p0050_powx_n;
+mod p0051_n_queens;
+mod p0052_n_queens_ii;
