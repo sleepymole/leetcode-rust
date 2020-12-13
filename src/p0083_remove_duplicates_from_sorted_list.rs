@@ -1,19 +1,7 @@
 #![allow(dead_code)]
 pub struct Solution;
 
-// Definition for singly-linked list.
-#[derive(PartialEq, Eq, Clone, Debug)]
-pub struct ListNode {
-    pub val: i32,
-    pub next: Option<Box<ListNode>>,
-}
-
-impl ListNode {
-    #[inline]
-    fn new(val: i32) -> Self {
-        ListNode { next: None, val }
-    }
-}
+use crate::util::ListNode;
 
 impl Solution {
     pub fn delete_duplicates(head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
@@ -47,13 +35,10 @@ mod tests {
 
     #[test]
     fn test_delete_duplicates() {
+        assert_eq!(Solution::delete_duplicates(list!(1, 1, 2)), list!(1, 2));
         assert_eq!(
-            Solution::delete_duplicates(to_list(vec![1, 1, 2])),
-            to_list(vec![1, 2])
-        );
-        assert_eq!(
-            Solution::delete_duplicates(to_list(vec![1, 1, 2, 3, 3])),
-            to_list(vec![1, 2, 3])
+            Solution::delete_duplicates(list!(1, 1, 2, 3, 3)),
+            list!(1, 2, 3)
         );
     }
 }

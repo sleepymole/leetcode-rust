@@ -1,19 +1,7 @@
 #![allow(dead_code)]
 pub struct Solution;
 
-// Definition for singly-linked list.
-#[derive(PartialEq, Eq, Clone, Debug)]
-pub struct ListNode {
-    pub val: i32,
-    pub next: Option<Box<ListNode>>,
-}
-
-impl ListNode {
-    #[inline]
-    fn new(val: i32) -> Self {
-        ListNode { next: None, val }
-    }
-}
+use crate::util::ListNode;
 
 impl Solution {
     pub fn merge_two_lists(
@@ -62,16 +50,10 @@ mod tests {
     #[test]
     fn test_merge_two_lists() {
         assert_eq!(
-            Solution::merge_two_lists(to_list(vec![1, 2, 4]), to_list(vec![1, 3, 4])),
-            to_list(vec![1, 1, 2, 3, 4, 4])
+            Solution::merge_two_lists(list!(1, 2, 4), list!(1, 3, 4)),
+            list!(1, 1, 2, 3, 4, 4)
         );
-        assert_eq!(
-            Solution::merge_two_lists(to_list(vec![]), to_list(vec![])),
-            to_list(vec![])
-        );
-        assert_eq!(
-            Solution::merge_two_lists(to_list(vec![]), to_list(vec![0])),
-            to_list(vec![0])
-        );
+        assert_eq!(Solution::merge_two_lists(list!(), list!()), list!());
+        assert_eq!(Solution::merge_two_lists(list!(), list!(0)), list!(0));
     }
 }

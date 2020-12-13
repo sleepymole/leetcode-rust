@@ -1,19 +1,7 @@
 #![allow(dead_code)]
 pub struct Solution;
 
-// Definition for singly-linked list.
-#[derive(PartialEq, Eq, Clone, Debug)]
-pub struct ListNode {
-    pub val: i32,
-    pub next: Option<Box<ListNode>>,
-}
-
-impl ListNode {
-    #[inline]
-    fn new(val: i32) -> Self {
-        ListNode { next: None, val }
-    }
-}
+use crate::util::ListNode;
 
 impl Solution {
     pub fn partition(head: Option<Box<ListNode>>, x: i32) -> Option<Box<ListNode>> {
@@ -54,8 +42,8 @@ mod tests {
     #[test]
     fn test_partition() {
         assert_eq!(
-            Solution::partition(to_list(vec![1, 4, 3, 2, 5, 2]), 3),
-            to_list(vec![1, 2, 2, 4, 3, 5])
+            Solution::partition(list!(1, 4, 3, 2, 5, 2), 3),
+            list!(1, 2, 2, 4, 3, 5)
         );
     }
 }

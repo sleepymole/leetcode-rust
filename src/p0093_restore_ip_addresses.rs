@@ -30,7 +30,6 @@ impl Solution {
         }
         let mut ans = Vec::new();
         for i in 1..s.len() {
-            
             for j in i + 1..s.len() {
                 for k in j + 1..s.len() {
                     if let Some(a) = Solution::parse(&s, 0, i) {

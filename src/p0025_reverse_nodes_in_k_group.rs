@@ -1,19 +1,7 @@
 #![allow(dead_code)]
 pub struct Solution;
 
-// Definition for singly-linked list.
-#[derive(PartialEq, Eq, Clone, Debug)]
-pub struct ListNode {
-    pub val: i32,
-    pub next: Option<Box<ListNode>>,
-}
-
-impl ListNode {
-    #[inline]
-    fn new(val: i32) -> Self {
-        ListNode { next: None, val }
-    }
-}
+use crate::util::ListNode;
 
 impl Solution {
     pub fn reverse_k_group(head: Option<Box<ListNode>>, k: i32) -> Option<Box<ListNode>> {
@@ -64,20 +52,17 @@ mod tests {
     #[test]
     fn test_reverse_k_group() {
         assert_eq!(
-            Solution::reverse_k_group(to_list(vec![1, 2, 3, 4, 5]), 2),
-            to_list(vec![2, 1, 4, 3, 5])
+            Solution::reverse_k_group(list!(1, 2, 3, 4, 5), 2),
+            list!(2, 1, 4, 3, 5)
         );
         assert_eq!(
-            Solution::reverse_k_group(to_list(vec![1, 2, 3, 4, 5]), 3),
-            to_list(vec![3, 2, 1, 4, 5])
+            Solution::reverse_k_group(list!(1, 2, 3, 4, 5), 3),
+            list!(3, 2, 1, 4, 5)
         );
         assert_eq!(
-            Solution::reverse_k_group(to_list(vec![1, 2, 3, 4, 5]), 1),
-            to_list(vec![1, 2, 3, 4, 5])
+            Solution::reverse_k_group(list!(1, 2, 3, 4, 5), 1),
+            list!(1, 2, 3, 4, 5)
         );
-        assert_eq!(
-            Solution::reverse_k_group(to_list(vec![1]), 1),
-            to_list(vec![1])
-        );
+        assert_eq!(Solution::reverse_k_group(list!(1), 1), list!(1));
     }
 }

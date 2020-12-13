@@ -1,19 +1,7 @@
 #![allow(dead_code)]
 pub struct Solution;
 
-// Definition for singly-linked list.
-#[derive(PartialEq, Eq, Clone, Debug)]
-pub struct ListNode {
-    pub val: i32,
-    pub next: Option<Box<ListNode>>,
-}
-
-impl ListNode {
-    #[inline]
-    fn new(val: i32) -> Self {
-        ListNode { next: None, val }
-    }
-}
+use crate::util::ListNode;
 
 impl Solution {
     pub fn rotate_right(head: Option<Box<ListNode>>, k: i32) -> Option<Box<ListNode>> {
@@ -62,12 +50,9 @@ mod tests {
     #[test]
     fn test_rotate_right() {
         assert_eq!(
-            Solution::rotate_right(to_list(vec![1, 2, 3, 4, 5]), 2),
-            to_list(vec![4, 5, 1, 2, 3])
+            Solution::rotate_right(list!(1, 2, 3, 4, 5), 2),
+            list!(4, 5, 1, 2, 3)
         );
-        assert_eq!(
-            Solution::rotate_right(to_list(vec![0, 1, 2]), 4),
-            to_list(vec![2, 0, 1])
-        );
+        assert_eq!(Solution::rotate_right(list!(0, 1, 2), 4), list!(2, 0, 1));
     }
 }

@@ -1,19 +1,7 @@
 #![allow(dead_code)]
 pub struct Solution;
 
-// Definition for singly-linked list.
-#[derive(PartialEq, Eq, Clone, Debug)]
-pub struct ListNode {
-    pub val: i32,
-    pub next: Option<Box<ListNode>>,
-}
-
-impl ListNode {
-    #[inline]
-    fn new(val: i32) -> Self {
-        ListNode { next: None, val }
-    }
-}
+use crate::util::ListNode;
 
 use std::cmp::Ordering;
 use std::collections::BinaryHeap;
@@ -71,17 +59,10 @@ mod tests {
     #[test]
     fn test_merge_k_lists() {
         assert_eq!(
-            Solution::merge_k_lists(vec![
-                to_list(vec![1, 4, 5]),
-                to_list(vec![1, 3, 4]),
-                to_list(vec![2, 6]),
-            ]),
-            to_list(vec![1, 1, 2, 3, 4, 4, 5, 6])
+            Solution::merge_k_lists(vec![list!(1, 4, 5), list!(1, 3, 4), list!(2, 6),]),
+            list!(1, 1, 2, 3, 4, 4, 5, 6)
         );
-        assert_eq!(Solution::merge_k_lists(vec![]), to_list(vec![]));
-        assert_eq!(
-            Solution::merge_k_lists(vec![to_list(vec![])]),
-            to_list(vec![])
-        );
+        assert_eq!(Solution::merge_k_lists(vec![]), list!());
+        assert_eq!(Solution::merge_k_lists(vec![list!()]), list!());
     }
 }

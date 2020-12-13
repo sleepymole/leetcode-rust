@@ -1,19 +1,7 @@
 #![allow(dead_code)]
 pub struct Solution;
 
-// Definition for singly-linked list.
-#[derive(PartialEq, Eq, Clone, Debug)]
-pub struct ListNode {
-    pub val: i32,
-    pub next: Option<Box<ListNode>>,
-}
-
-impl ListNode {
-    #[inline]
-    fn new(val: i32) -> Self {
-        ListNode { next: None, val }
-    }
-}
+use crate::util::ListNode;
 
 impl Solution {
     pub fn reverse_between(head: Option<Box<ListNode>>, m: i32, n: i32) -> Option<Box<ListNode>> {
@@ -42,21 +30,11 @@ impl Solution {
 mod test {
     use super::*;
 
-    fn to_list(v: Vec<i32>) -> Option<Box<ListNode>> {
-        let mut cur = None;
-        for &x in v.iter().rev() {
-            let mut n = ListNode::new(x);
-            n.next = cur;
-            cur = Some(Box::new(n));
-        }
-        cur
-    }
-
     #[test]
     fn test_reverse_between() {
         assert_eq!(
-            Solution::reverse_between(to_list(vec![1, 2, 3, 4, 5]), 2, 4),
-            to_list(vec![1, 4, 3, 2, 5])
+            Solution::reverse_between(list!(1, 2, 3, 4, 5), 2, 4),
+            list!(1, 4, 3, 2, 5)
         );
     }
 }

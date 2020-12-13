@@ -1,19 +1,7 @@
 #![allow(dead_code)]
 pub struct Solution;
 
-// Definition for singly-linked list.
-#[derive(PartialEq, Eq, Clone, Debug)]
-pub struct ListNode {
-    pub val: i32,
-    pub next: Option<Box<ListNode>>,
-}
-
-impl ListNode {
-    #[inline]
-    fn new(val: i32) -> Self {
-        ListNode { next: None, val }
-    }
-}
+use crate::util::ListNode;
 
 impl Solution {
     pub fn add_two_numbers(
@@ -60,18 +48,8 @@ mod tests {
     #[test]
     fn test_add_two_numbers() {
         assert_eq!(
-            Solution::add_two_numbers(vec_to_list(vec![2, 4, 3]), vec_to_list(vec![5, 6, 4])),
-            vec_to_list(vec![7, 0, 8])
+            Solution::add_two_numbers(list!(2, 4, 3), list!(5, 6, 4)),
+            list!(7, 0, 8)
         );
-    }
-
-    fn vec_to_list(nums: Vec<i32>) -> Option<Box<ListNode>> {
-        let mut head = None;
-        let mut tail = &mut head;
-        for &x in nums.iter() {
-            *tail = Some(Box::new(ListNode::new(x)));
-            tail = &mut tail.as_mut().unwrap().next;
-        }
-        head
     }
 }

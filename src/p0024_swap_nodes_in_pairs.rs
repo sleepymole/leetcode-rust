@@ -1,19 +1,7 @@
 #![allow(dead_code)]
 pub struct Solution;
 
-// Definition for singly-linked list.
-#[derive(PartialEq, Eq, Clone, Debug)]
-pub struct ListNode {
-    pub val: i32,
-    pub next: Option<Box<ListNode>>,
-}
-
-impl ListNode {
-    #[inline]
-    fn new(val: i32) -> Self {
-        ListNode { next: None, val }
-    }
-}
+use crate::util::ListNode;
 
 impl Solution {
     pub fn swap_pairs(head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
@@ -49,10 +37,7 @@ mod tests {
 
     #[test]
     fn test_swap_pairs() {
-        assert_eq!(
-            Solution::swap_pairs(to_list(vec![1, 2, 3, 4])),
-            to_list(vec![2, 1, 4, 3])
-        );
-        assert_eq!(Solution::swap_pairs(to_list(vec![1])), to_list(vec![1]));
+        assert_eq!(Solution::swap_pairs(list!(1, 2, 3, 4)), list!(2, 1, 4, 3));
+        assert_eq!(Solution::swap_pairs(list!(1)), list!(1));
     }
 }
