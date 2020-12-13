@@ -22,14 +22,12 @@ impl Solution {
             if actual[s[j] as usize] <= epexct[s[j] as usize] {
                 matched += 1;
             }
-            if matched == n {
-                if ans.is_none() || ans.as_ref().unwrap().len() > j - i + 1 {
-                    let mut ss = String::new();
-                    for k in i..=j {
-                        ss.push(s[k] as char);
-                    }
-                    ans = Some(ss);
+            if matched == n && (ans.is_none() || ans.as_ref().unwrap().len() > j - i + 1) {
+                let mut ss = String::new();
+                for k in i..=j {
+                    ss.push(s[k] as char);
                 }
+                ans = Some(ss);
             }
             while matched == n || i <= j && actual[s[i] as usize] > epexct[s[i] as usize] {
                 if actual[s[i] as usize] <= epexct[s[i] as usize] {

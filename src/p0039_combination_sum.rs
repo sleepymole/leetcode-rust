@@ -27,7 +27,7 @@ mod tests {
 
     fn normalize(mut results: Vec<Vec<i32>>) -> Vec<Vec<i32>> {
         for res in results.iter_mut() {
-            res.sort();
+            res.sort_unstable();
         }
         results.sort();
         results

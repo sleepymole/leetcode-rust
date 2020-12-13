@@ -11,9 +11,7 @@ impl Solution {
                 && x != (i + 1) as i32
                 && nums[(x - 1) as usize] != x
             {
-                let t = nums[(x - 1) as usize];
-                nums[(x - 1) as usize] = x;
-                x = t;
+                std::mem::swap(&mut nums[(x - 1) as usize], &mut x);
             }
             nums[i] = x;
         }

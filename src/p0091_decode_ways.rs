@@ -9,17 +9,17 @@ impl Solution {
         let s = s.into_bytes();
         let mut f = Vec::new();
         f.resize(s.len(), 0);
-        if s[0] > '0' as u8 {
+        if s[0] > b'0' {
             f[0] = 1;
         }
         for i in 1..s.len() {
-            if s[i] > '0' as u8 {
+            if s[i] > b'0' {
                 f[i] = f[i - 1]
             }
-            if s[i - 1] == '0' as u8 {
+            if s[i - 1] == b'0' {
                 continue;
             }
-            let x = (s[i - 1] - '0' as u8) * 10 + s[i] - '0' as u8;
+            let x = (s[i - 1] - b'0') * 10 + s[i] - b'0';
             if x > 0 && x <= 26 {
                 if i >= 2 {
                     f[i] += f[i - 2];

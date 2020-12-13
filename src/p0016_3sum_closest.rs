@@ -4,7 +4,7 @@ pub struct Solution;
 impl Solution {
     pub fn three_sum_closest(nums: Vec<i32>, target: i32) -> i32 {
         let mut nums = nums;
-        nums.sort();
+        nums.sort_unstable();
         let mut ans: Option<i32> = None;
         for i in 0..nums.len() {
             let (mut l, mut r) = (i + 1, nums.len() - 1);

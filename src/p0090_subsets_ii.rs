@@ -4,7 +4,7 @@ pub struct Solution;
 impl Solution {
     pub fn subsets_with_dup(nums: Vec<i32>) -> Vec<Vec<i32>> {
         let mut nums = nums;
-        nums.sort();
+        nums.sort_unstable();
         let mut ans = vec![vec![]];
         let mut i = 0;
         while i < nums.len() {
@@ -33,7 +33,7 @@ mod test {
     fn sorted(nums: Vec<Vec<i32>>) -> Vec<Vec<i32>> {
         let mut nums = nums;
         for x in nums.iter_mut() {
-            x.sort();
+            x.sort_unstable();
         }
         nums.sort();
         nums

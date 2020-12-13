@@ -17,12 +17,10 @@ impl Solution {
                 } else {
                     l = m + 1;
                 }
+            } else if nums[m] <= target && target <= nums[r] {
+                l = m;
             } else {
-                if nums[m] <= target && target <= nums[r] {
-                    l = m;
-                } else {
-                    r = m - 1;
-                }
+                r = m - 1;
             }
         }
         nums[l] == target || nums[r] == target

@@ -34,8 +34,8 @@ impl Solution {
             let x2 = x.next.take();
             *next = Some(x);
             next = &mut next.as_mut().unwrap().next;
-            if x2.is_some() {
-                heap.push(x2.unwrap());
+            if let Some(v) = x2 {
+                heap.push(v);
             }
         }
         head

@@ -23,7 +23,7 @@ impl Solution {
                     continue;
                 }
             }
-            if c < '0' || c > '9' {
+            if !('0'..='9').contains(&c) {
                 return flag * n;
             }
             let d = c.to_digit(10).unwrap() as i32;

@@ -22,7 +22,7 @@ impl Solution {
                 let mut results = f[(i - x) as usize].clone();
                 for r in results.iter_mut() {
                     r.push(x);
-                    r.sort();
+                    r.sort_unstable();
                 }
                 f[i as usize].append(&mut results);
                 f[i as usize].sort();
@@ -39,7 +39,7 @@ mod tests {
 
     fn normalize(mut results: Vec<Vec<i32>>) -> Vec<Vec<i32>> {
         for res in results.iter_mut() {
-            res.sort();
+            res.sort_unstable();
         }
         results.sort();
         results

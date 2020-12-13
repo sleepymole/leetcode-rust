@@ -25,7 +25,7 @@ mod tests {
 
     fn sorted(mut vs: Vec<Vec<i32>>) -> Vec<Vec<i32>> {
         for v in vs.iter_mut() {
-            v.sort();
+            v.sort_unstable();
         }
         vs.sort();
         vs

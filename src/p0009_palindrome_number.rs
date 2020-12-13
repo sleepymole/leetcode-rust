@@ -12,7 +12,7 @@ impl Solution {
             rx = rx * 10 + t % 10;
             t /= 10;
         }
-        return rx == x;
+        rx == x
     }
 }
 

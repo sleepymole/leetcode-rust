@@ -47,7 +47,7 @@ impl Solution {
                 j += wlen;
             }
         }
-        ans.sort();
+        ans.sort_unstable();
         ans
     }
 }

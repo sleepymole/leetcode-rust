@@ -11,22 +11,18 @@ impl Solution {
             i -= 1;
         }
         if i == 0 {
-            nums.sort();
+            nums.sort_unstable();
             return;
         }
         for j in (i..nums.len()).rev() {
             if nums[j] > nums[i - 1] {
-                let t = nums[j];
-                nums[j] = nums[i - 1];
-                nums[i - 1] = t;
+                nums.swap(j, i - 1);
                 break;
             }
         }
         let mut j = nums.len() - 1;
         while i < j {
-            let t = nums[j];
-            nums[j] = nums[i];
-            nums[i] = t;
+            nums.swap(j, i);
             i += 1;
             j -= 1;
         }

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+ALLOWED_CLIPPY_LINTS=(
+    -A clippy::many_single_char_names
+    -A clippy::needless_range_loop
+    -A clippy::comparison_chain
+    -A clippy::ptr_arg
+)
+
+cargo +nightly clippy --fix --allow-dirty --allow-staged -Z unstable-options -- "${ALLOWED_CLIPPY_LINTS[@]}"
+cargo +nightly clippy --workspace --all-targets --no-default-features -- "${ALLOWED_CLIPPY_LINTS[@]}"

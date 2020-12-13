@@ -17,7 +17,7 @@ impl Solution {
 
     pub fn three_sum(nums: Vec<i32>) -> Vec<Vec<i32>> {
         let mut nums = nums;
-        nums.sort();
+        nums.sort_unstable();
         let mut ans: Vec<Vec<i32>> = Vec::new();
         for i in 0..nums.len() {
             let (mut l, mut r) = (i + 1, nums.len() - 1);
@@ -52,7 +52,7 @@ mod tests {
                 for k in j + 1..nums.len() {
                     if nums[i] + nums[j] + nums[k] == 0 {
                         let mut res = vec![nums[i], nums[j], nums[k]];
-                        res.sort();
+                        res.sort_unstable();
                         ans.push(res);
                     }
                 }

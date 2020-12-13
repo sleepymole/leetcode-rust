@@ -8,13 +8,10 @@ impl Solution {
         let mut m: HashMap<char, i32> = HashMap::new();
         let (mut start, mut max_len) = (0, 0);
         for (i, c) in s.chars().enumerate() {
-            match m.get(&c) {
-                Some(p) => {
-                    if *p >= start {
-                        start = *p + 1;
-                    }
+            if let Some(&p) = m.get(&c) {
+                if p >= start {
+                    start = p + 1;
                 }
-                None => (),
             }
             if i as i32 - start + 1 > max_len {
                 max_len = i as i32 - start + 1;

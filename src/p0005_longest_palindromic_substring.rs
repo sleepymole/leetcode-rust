@@ -8,9 +8,7 @@ impl Solution {
             chars.push(c);
             chars.push('#');
         }
-        let mut radius = Vec::with_capacity(chars.len());
-        radius.resize(chars.len(), 0);
-        assert_eq!(radius.len(), chars.len());
+        let mut radius = vec![0; chars.len()];
         let (mut center, mut right, mut max_center, mut max_radius) = (0, 0, 0, 0);
         for i in 0..chars.len() {
             if i < right {
@@ -19,7 +17,7 @@ impl Solution {
                     radius[i] = right - i;
                 }
             }
-            while i >= radius[i] + 1
+            while i > radius[i]
                 && i + radius[i] + 1 < chars.len()
                 && chars[i - radius[i] - 1] == chars[i + radius[i] + 1]
             {

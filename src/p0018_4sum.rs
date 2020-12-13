@@ -8,8 +8,9 @@ impl Solution {
         let mut m: HashMap<i32, Vec<(usize, usize)>> = HashMap::new();
         for i in 0..nums.len() {
             for j in i + 1..nums.len() {
-                let v = m.entry(target - nums[i] - nums[j]).or_insert(vec![]);
-                v.push((i, j));
+                m.entry(target - nums[i] - nums[j])
+                    .or_insert_with(Vec::new)
+                    .push((i, j));
             }
         }
         let mut s: HashSet<Vec<i32>> = HashSet::new();
@@ -19,7 +20,7 @@ impl Solution {
                     for p in v {
                         if i != p.0 && i != p.1 && j != p.0 && j != p.1 {
                             let mut res = vec![nums[i], nums[j], nums[p.0], nums[p.1]];
-                            res.sort();
+                            res.sort_unstable();
                             s.insert(res);
                         }
                     }
@@ -36,7 +37,7 @@ mod tests {
 
     fn normalize(mut quads: Vec<Vec<i32>>) -> Vec<Vec<i32>> {
         for q in quads.iter_mut() {
-            q.sort();
+            q.sort_unstable();
         }
         quads.sort();
         quads

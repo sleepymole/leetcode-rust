@@ -26,7 +26,7 @@ impl Solution {
         }
         for i in 0..usize::max(num3.len(), 1) - 1 {
             num3[i + 1] += num3[i] / 10;
-            num3[i] = num3[i] % 10;
+            num3[i] %= 10;
         }
         while num3.len() > 1 && *num3.last().unwrap() == 0 {
             num3.pop();

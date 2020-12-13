@@ -15,26 +15,22 @@ impl Solution {
         }
         for j in (i..nums.len()).rev() {
             if nums[j] > nums[i - 1] {
-                let t = nums[j];
-                nums[j] = nums[i - 1];
-                nums[i - 1] = t;
+                nums.swap(j, i - 1);
                 break;
             }
         }
         let mut j = nums.len() - 1;
         while i < j {
-            let t = nums[j];
-            nums[j] = nums[i];
-            nums[i] = t;
+            nums.swap(j, i);
             i += 1;
             j -= 1;
         }
-        return true;
+        true
     }
 
     pub fn permute_unique(nums: Vec<i32>) -> Vec<Vec<i32>> {
         let mut nums = nums;
-        nums.sort();
+        nums.sort_unstable();
         let mut res = Vec::new();
         loop {
             res.push(nums.clone());

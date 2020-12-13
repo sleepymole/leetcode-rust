@@ -8,9 +8,9 @@ impl Solution {
         let mut m = HashMap::new();
         for s in strs.into_iter() {
             let mut chars: Vec<char> = s.chars().collect();
-            chars.sort();
+            chars.sort_unstable();
             let key: String = chars.into_iter().collect();
-            m.entry(key).or_insert(vec![]).push(s);
+            m.entry(key).or_insert_with(Vec::new).push(s);
         }
         m.into_iter().map(|(_, v)| v).collect()
     }

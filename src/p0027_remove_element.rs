@@ -28,7 +28,7 @@ mod tests {
         let mut nums = vec![0, 1, 2, 2, 3, 0, 4, 2];
         let n = Solution::remove_element(&mut nums, 2);
         assert_eq!(n, 5);
-        nums.sort();
+        nums.sort_unstable();
         assert_eq!(nums, vec![0, 0, 1, 3, 4]);
     }
 }

@@ -18,7 +18,7 @@ impl Solution {
             let (mut l, mut r) = (0, 0);
             let mut p: Option<usize> = None;
             for i in 0..bs.len() {
-                if bs[i] == '(' as u8 {
+                if bs[i] == b'(' {
                     if l > r {
                         p = Some(i);
                     }

@@ -10,14 +10,12 @@ impl Solution {
         for (i, c) in s.chars().enumerate() {
             if c == '(' {
                 stk.push(i);
-            } else {
-                if let Some(x) = stk.pop() {
-                    dp[i] = i - x + 1;
-                    if x > 0 {
-                        dp[i] += dp[x - 1];
-                    }
-                    ans = usize::max(ans, dp[i]);
+            } else if let Some(x) = stk.pop() {
+                dp[i] = i - x + 1;
+                if x > 0 {
+                    dp[i] += dp[x - 1];
                 }
+                ans = usize::max(ans, dp[i]);
             }
         }
         ans as i32

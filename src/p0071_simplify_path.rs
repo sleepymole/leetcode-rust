@@ -6,7 +6,7 @@ impl Solution {
         let mut stk = Vec::new();
         let names: Vec<&str> = path.split('/').collect();
         for name in names {
-            if name == "" || name == "." {
+            if name.is_empty() || name == "." {
                 continue;
             }
             if name == ".." {
@@ -22,7 +22,7 @@ impl Solution {
             ans.push('/');
             ans.push_str(s);
         }
-        if ans.len() == 0 {
+        if ans.is_empty() {
             ans.push('/');
         }
         ans
