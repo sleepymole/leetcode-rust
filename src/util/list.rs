@@ -18,17 +18,16 @@ macro_rules! list {
     () => {
         None::<Box<ListNode>>
     };
-    ($($x:expr),*) => {
-        {
-            let mut head = None;
-            let mut next = &mut head;
-            $(
-                *next = Some(Box:: new( ListNode::new($x)));
-                next = &mut next.as_mut().unwrap().next;
-            )*
-            let _ = next;
-            let head = head;
-            head
-        }
+    ($x:expr$(,)?)=> {
+        Some(Box::new(ListNode::new($x)))
     };
+    ($x:expr$(,$y:expr)+$(,)?) => {{
+        let mut head = Some(Box::new(ListNode::new($x)));
+        let mut next = &mut head;
+        $(
+            next = &mut next.as_mut().unwrap().next;
+            *next = Some(Box::new(ListNode::new($y)));
+        )*
+        head
+    }};
 }
