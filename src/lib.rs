@@ -102,4 +102,5 @@ mod p0098_validate_binary_search_tree;
 mod p0099_recover_binary_search_tree;
 mod p0100_same_tree;
 mod p0101_symmetric_tree;
+mod p0104_maximum_depth_of_binary_tree;
 mod p0115_distinct_subsequences;
