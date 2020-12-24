@@ -9,45 +9,35 @@ use std::rc::Rc;
 
 impl Solution {
     pub fn recover_tree(root: &mut Option<Rc<RefCell<TreeNode>>>) {
+        let mut root = root.clone();
         let (mut first, mut second) = (None, None);
-        let mut cur = root.clone();
-        let mut tmp: Option<Rc<RefCell<TreeNode>>> = None;
-        while cur.is_some() {
-            if cur.as_ref().unwrap().borrow().left.is_some() {
-                let mut prev = cur.as_ref().unwrap().borrow().left.clone();
-                while prev.as_ref().unwrap().borrow().right.is_some()
-                    && prev
-                        .as_ref()
-                        .unwrap()
-                        .borrow()
-                        .right
-                        .as_ref()
-                        .unwrap()
-                        .borrow()
-                        .val
-                        != cur.as_ref().unwrap().borrow().val
+        let mut prev: Option<Rc<RefCell<TreeNode>>> = None;
+        while let Some(node) = root {
+            if let Some(mut cur) = node.borrow().left.clone() {
+                while cur.borrow().right.is_some()
+                    && !Rc::ptr_eq(cur.borrow().right.as_ref().unwrap(), &node)
                 {
-                    prev = prev.unwrap().borrow().right.clone();
+                    let right = cur.borrow().right.clone().unwrap();
+                    cur = right;
                 }
-                if prev.as_ref().unwrap().borrow().right.is_none() {
-                    prev.as_ref().unwrap().borrow_mut().right = cur.clone();
-                    cur = cur.unwrap().borrow().left.clone();
+                if cur.borrow().right.is_none() {
+                    cur.borrow_mut().right = Some(node.clone());
+                    root = node.borrow().left.clone();
                     continue;
                 }
-                prev.as_ref().unwrap().borrow_mut().right = None;
+                cur.borrow_mut().right = None;
             }
-            if tmp.is_some()
-                && tmp.as_ref().unwrap().borrow().val > cur.as_ref().unwrap().borrow().val
+            if prev
+                .as_ref()
+                .map_or(false, |x| x.borrow().val > node.borrow().val)
             {
                 if first.is_none() {
-                    first = tmp.clone();
-                    second = cur.clone();
-                } else {
-                    second = cur.clone();
+                    first = prev.clone();
                 }
+                second = Some(node.clone());
             }
-            tmp = cur.clone();
-            cur = cur.unwrap().borrow().right.clone();
+            prev = Some(node.clone());
+            root = node.borrow().right.clone();
         }
         if first.is_some() && second.is_some() {
             mem::swap(

@@ -7,20 +7,26 @@ use std::cell::RefCell;
 use std::rc::Rc;
 
 impl Solution {
-    fn traverse(parent: Rc<RefCell<TreeNode>>, nums: &mut Vec<i32>) {
-        if let Some(ref v) = parent.borrow().left {
-            Solution::traverse(v.clone(), nums);
-        }
-        nums.push(parent.borrow().val);
-        if let Some(ref v) = parent.borrow().right {
-            Solution::traverse(v.clone(), nums);
-        }
-    }
-
     pub fn inorder_traversal(root: Option<Rc<RefCell<TreeNode>>>) -> Vec<i32> {
         let mut nums = Vec::new();
-        if let Some(v) = root {
-            Solution::traverse(v, &mut nums);
+        let mut root = root;
+        while let Some(node) = root {
+            if let Some(mut cur) = node.borrow().left.clone() {
+                while cur.borrow().right.is_some()
+                    && !Rc::ptr_eq(cur.borrow().right.as_ref().unwrap(), &node)
+                {
+                    let right = cur.borrow().right.clone().unwrap();
+                    cur = right;
+                }
+                if cur.borrow().right.is_none() {
+                    cur.borrow_mut().right = Some(node.clone());
+                    root = node.borrow().left.clone();
+                    continue;
+                }
+                cur.borrow_mut().right = None;
+            }
+            nums.push(node.borrow().val);
+            root = node.borrow().right.clone();
         }
         nums
     }
