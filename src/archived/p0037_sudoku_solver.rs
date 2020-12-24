@@ -51,7 +51,7 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use super::*;
-    use crate::p0036_valid_sudoku;
+    use crate::archived::p0036_valid_sudoku;
 
     #[test]
     fn test_solve_sudoku() {

@@ -12,32 +12,21 @@ impl Solution {
         let mut head = None;
         let mut tail = &mut head;
         let mut carry = 0;
-        loop {
+        while l1.is_some() || l2.is_some() || carry > 0 {
             let mut x = carry;
-            let mut exit = true;
-            x += match l1 {
-                Some(node) => {
-                    l1 = node.next;
-                    exit = false;
-                    node.val
-                }
-                None => 0,
-            };
-            x += match l2 {
-                Some(node) => {
-                    l2 = node.next;
-                    exit = false;
-                    node.val
-                }
-                None => 0,
-            };
-            if exit && carry == 0 {
-                break head;
+            if let Some(node) = l1 {
+                x += node.val;
+                l1 = node.next;
+            }
+            if let Some(node) = l2 {
+                x += node.val;
+                l2 = node.next;
             }
             *tail = Some(Box::new(ListNode::new(x % 10)));
             tail = &mut tail.as_mut().unwrap().next;
             carry = x / 10;
         }
+        head
     }
 }
 
