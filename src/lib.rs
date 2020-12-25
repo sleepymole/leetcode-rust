@@ -6,4 +6,7 @@ mod p0101_symmetric_tree;
 mod p0102_binary_tree_level_order_traversal;
 mod p0103_binary_tree_zigzag_level_order_traversal;
 mod p0104_maximum_depth_of_binary_tree;
+mod p0105_construct_binary_tree_from_preorder_and_inorder_traversal;
+mod p0106_construct_binary_tree_from_inorder_and_postorder_traversal;
+mod p0107_binary_tree_level_order_traversal_ii;
 mod p0115_distinct_subsequences;
