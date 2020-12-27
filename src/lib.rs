@@ -30,3 +30,5 @@ mod p0127_word_ladder;
 mod p0128_longest_consecutive_sequence;
 mod p0129_sum_root_to_leaf_numbers;
 mod p0130_surrounded_regions;
+mod p0131_palindrome_partitioning;
+mod p0132_palindrome_partitioning_ii;
