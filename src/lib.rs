@@ -37,4 +37,5 @@ mod p0135_candy;
 mod p0136_single_number;
 mod p0137_single_number_ii;
 mod p0143_reorder_list;
+mod p0144_binary_tree_preorder_traversal;
 mod p0168_excel_sheet_column_title;
