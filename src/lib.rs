@@ -41,5 +41,6 @@ mod p0140_word_break_ii;
 mod p0143_reorder_list;
 mod p0144_binary_tree_preorder_traversal;
 mod p0145_binary_tree_postorder_traversal;
+mod p0146_lru_cache;
 mod p0147_insertion_sort_list;
 mod p0168_excel_sheet_column_title;
