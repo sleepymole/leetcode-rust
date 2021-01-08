@@ -6,33 +6,28 @@ use crate::util::ListNode;
 impl Solution {
     pub fn insertion_sort_list(head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
         let mut head = head;
-        let mut tail = &mut head;
-        while tail.is_some() {
-            let mut x = tail.take();
-            let (mut i, mut v) = (0, x.as_ref().unwrap().val);
-            let mut p = &x.as_ref().unwrap().next;
+        let mut cur = &mut head;
+        while let Some(node) = cur {
+            let mut min = (0, node.val);
             let mut step = 0;
-            while let Some(node) = p {
+            let mut next = &node.next;
+            while let Some(node) = next {
                 step += 1;
-                if node.val < v {
-                    i = step;
-                    v = node.val;
+                if node.val < min.1 {
+                    min = (step, node.val);
                 }
-                p = &node.next;
+                next = &node.next;
             }
-            if i == 0 {
-                *tail = x;
-                tail = &mut tail.as_mut().unwrap().next;
-                continue;
+            let mut front = cur.take();
+            let mut next = &mut front;
+            for _ in 0..min.0 {
+                next = &mut next.as_mut().unwrap().next;
             }
-            let mut p = &mut x;
-            for _ in 0..i - 1 {
-                p = &mut p.as_mut().unwrap().next;
-            }
-            let mut target = p.as_mut().unwrap().next.take();
-            p.as_mut().unwrap().next = target.as_mut().unwrap().next.take();
-            target.as_mut().unwrap().next = x.take();
-            *tail = target;
+            let mut new_front = next.take();
+            *next = new_front.as_mut().unwrap().next.take();
+            new_front.as_mut().unwrap().next = front;
+            *cur = new_front;
+            cur = &mut cur.as_mut().unwrap().next;
         }
         head
     }
