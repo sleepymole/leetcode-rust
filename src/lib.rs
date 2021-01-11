@@ -46,4 +46,5 @@ mod p0147_insertion_sort_list;
 mod p0148_sort_list;
 mod p0149_max_points_on_a_line;
 mod p0150_evaluate_reverse_polish_notation;
+mod p0151_reverse_words_in_a_string;
 mod p0168_excel_sheet_column_title;
