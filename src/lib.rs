@@ -50,4 +50,5 @@ mod p0151_reverse_words_in_a_string;
 mod p0152_maximum_product_subarray;
 mod p0153_find_minimum_in_rotated_sorted_array;
 mod p0154_find_minimum_in_rotated_sorted_array_ii;
+mod p0155_min_stack;
 mod p0168_excel_sheet_column_title;
