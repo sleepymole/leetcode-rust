@@ -52,4 +52,5 @@ mod p0153_find_minimum_in_rotated_sorted_array;
 mod p0154_find_minimum_in_rotated_sorted_array_ii;
 mod p0155_min_stack;
 mod p0162_find_peak_element;
+mod p0164_maximum_gap;
 mod p0168_excel_sheet_column_title;
