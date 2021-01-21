@@ -55,4 +55,8 @@ mod p0162_find_peak_element;
 mod p0164_maximum_gap;
 mod p0165_compare_version_numbers;
 mod p0166_fraction_to_recurring_decimal;
+mod p0167_two_sum_ii_input_array_is_sorted;
 mod p0168_excel_sheet_column_title;
+mod p0169_majority_element;
+mod p0171_excel_sheet_column_number;
+mod p0172_factorial_trailing_zeroes;
