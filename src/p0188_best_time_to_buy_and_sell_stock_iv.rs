@@ -3,19 +3,22 @@ pub struct Solution;
 
 impl Solution {
     pub fn max_profit(k: i32, prices: Vec<i32>) -> i32 {
-        let k = k as usize;
-        let mut f = vec![vec![0; k + 1]; prices.len() + 1];
-        for i in 1..=prices.len() {
-            f[i] = f[i - 1].clone();
-            let mut min = prices[i - 1];
-            for j in (1..i).rev() {
-                min = min.min(prices[j - 1]);
-                for l in 1..=k {
-                    f[i][l] = f[i][l].max(f[j - 1][l - 1] + prices[i - 1] - min);
-                }
+        if prices.is_empty() {
+            return 0;
+        }
+        let mut k = k as usize;
+        if k * 2 > prices.len() {
+            k = prices.len() / 2;
+        }
+        let mut buy = vec![-prices[0]; k + 1];
+        let mut sell = vec![0; k + 1];
+        for p in prices.iter().skip(1) {
+            for i in 1..=k {
+                buy[i] = buy[i].max(sell[i - 1] - p);
+                sell[i] = sell[i].max(buy[i] + p);
             }
         }
-        f[prices.len()][k]
+        sell[k]
     }
 }
 
