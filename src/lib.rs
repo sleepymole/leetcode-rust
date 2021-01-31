@@ -68,3 +68,4 @@ mod p0188_best_time_to_buy_and_sell_stock_iv;
 mod p0189_rotate_array;
 mod p0190_reverse_bits;
 mod p0191_number_of_1_bits;
+mod p0198_house_robber;
