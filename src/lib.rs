@@ -8,3 +8,4 @@ mod p0203_remove_linked_list_elements;
 mod p0204_count_primes;
 mod p0205_isomorphic_strings;
 mod p0206_reverse_linked_list;
+mod p0207_course_schedule;
