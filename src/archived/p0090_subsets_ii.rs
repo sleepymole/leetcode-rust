@@ -27,7 +27,7 @@ impl Solution {
 }
 
 #[cfg(test)]
-mod test {
+mod tests {
     use super::*;
 
     fn sorted(nums: Vec<Vec<i32>>) -> Vec<Vec<i32>> {
