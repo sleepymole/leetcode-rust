@@ -33,6 +33,7 @@ impl Solution {
 mod tests {
     use super::*;
 
+    #[test]
     fn test_max_product() {
         assert_eq!(Solution::max_product(vec![2, 3, -2, 4]), 6);
         assert_eq!(Solution::max_product(vec![-2, 0, -1]), 0);
