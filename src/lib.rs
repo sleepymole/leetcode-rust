@@ -9,4 +9,5 @@ mod p0204_count_primes;
 mod p0205_isomorphic_strings;
 mod p0206_reverse_linked_list;
 mod p0207_course_schedule;
+mod p0208_implement_trie_prefix_tree;
 mod p0217_contains_duplicate;
