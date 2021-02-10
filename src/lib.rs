@@ -11,4 +11,5 @@ mod p0206_reverse_linked_list;
 mod p0207_course_schedule;
 mod p0208_implement_trie_prefix_tree;
 mod p0209_minimum_size_subarray_sum;
+mod p0210_course_schedule_ii;
 mod p0217_contains_duplicate;
