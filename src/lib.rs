@@ -15,4 +15,5 @@ mod p0210_course_schedule_ii;
 mod p0211_design_add_and_search_words_data_structure;
 mod p0214_shortest_palindrome;
 mod p0215_kth_largest_element_in_an_array;
+mod p0216_combination_sum_iii;
 mod p0217_contains_duplicate;
