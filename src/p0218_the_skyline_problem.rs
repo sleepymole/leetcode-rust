@@ -7,42 +7,35 @@ impl Solution {
     pub fn get_skyline(buildings: Vec<Vec<i32>>) -> Vec<Vec<i32>> {
         let mut angles = Vec::new();
         for b in buildings {
-            angles.push((b[0], b[2], false));
-            angles.push((b[1], b[2], true));
+            angles.push((b[0], -b[2]));
+            angles.push((b[1], b[2]));
         }
         angles.sort_unstable();
         let mut heights = BTreeMap::new();
         let mut points = Vec::new();
-        let mut i = 0;
-        while i < angles.len() {
-            let pos = angles[i].0;
+        for angle in angles {
             let h1 = heights
                 .iter()
                 .next_back()
-                .map(|(&&v, _)| v)
+                .map(|(&v, _)| v)
                 .unwrap_or_default();
-            let mut j = i;
-            while j < angles.len() && angles[j].0 == angles[i].0 {
-                if angles[j].2 {
-                    *heights.entry(&angles[j].1).or_default() -= 1;
-                    if let Some(&v) = heights.get(&angles[j].1) {
-                        if v == 0 {
-                            heights.remove(&angles[j].1);
-                        }
+            if angle.1 > 0 {
+                *heights.entry(angle.1).or_default() -= 1;
+                if let Some(&v) = heights.get(&angle.1) {
+                    if v == 0 {
+                        heights.remove(&angle.1);
                     }
-                } else {
-                    *heights.entry(&angles[j].1).or_insert(0) += 1;
                 }
-                j += 1;
+            } else {
+                *heights.entry(-angle.1).or_insert(0) += 1;
             }
-            i = j;
             let h2 = heights
                 .iter()
                 .next_back()
-                .map(|(&&v, _)| v)
+                .map(|(&v, _)| v)
                 .unwrap_or_default();
             if h1 != h2 {
-                points.push(vec![pos, h2]);
+                points.push(vec![angle.0, h2]);
             }
         }
         points
