@@ -21,3 +21,4 @@ mod p0216_combination_sum_iii;
 mod p0217_contains_duplicate;
 mod p0218_the_skyline_problem;
 mod p0219_contains_duplicate_ii;
+mod p0220_contains_duplicate_iii;
