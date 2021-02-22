@@ -23,3 +23,5 @@ mod p0218_the_skyline_problem;
 mod p0219_contains_duplicate_ii;
 mod p0220_contains_duplicate_iii;
 mod p0221_maximal_square;
+mod p0222_count_complete_tree_nodes;
+mod p0223_rectangle_area;
