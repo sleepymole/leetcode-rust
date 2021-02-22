@@ -25,3 +25,4 @@ mod p0220_contains_duplicate_iii;
 mod p0221_maximal_square;
 mod p0222_count_complete_tree_nodes;
 mod p0223_rectangle_area;
+mod p0224_basic_calculator;
