@@ -35,3 +35,5 @@ mod p0230_kth_smallest_element_in_a_bst;
 mod p0231_power_of_two;
 mod p0232_implement_queue_using_stacks;
 mod p0233_number_of_digit_one;
+mod p0234_palindrome_linked_list;
+mod p0235_lowest_common_ancestor_of_a_binary_search_tree;
