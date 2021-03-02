@@ -41,3 +41,4 @@ mod p0236_lowest_common_ancestor_of_a_binary_tree;
 mod p0238_product_of_array_except_self;
 mod p0239_sliding_window_maximum;
 mod p0240_search_a_2d_matrix_ii;
+mod p0242_valid_anagram;
