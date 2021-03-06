@@ -53,3 +53,4 @@ mod p0273_integer_to_english_words;
 mod p0274_h_index;
 mod p0275_h_index_ii;
 mod p0278_first_bad_version;
+mod p0279_perfect_squares;
