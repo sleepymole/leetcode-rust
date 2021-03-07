@@ -54,3 +54,6 @@ mod p0274_h_index;
 mod p0275_h_index_ii;
 mod p0278_first_bad_version;
 mod p0279_perfect_squares;
+mod p0282_expression_add_operators;
+mod p0283_move_zeroes;
+mod p0287_find_the_duplicate_number;
