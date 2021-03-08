@@ -57,3 +57,4 @@ mod p0279_perfect_squares;
 mod p0282_expression_add_operators;
 mod p0283_move_zeroes;
 mod p0287_find_the_duplicate_number;
+mod p0290_word_pattern;
