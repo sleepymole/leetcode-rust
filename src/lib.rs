@@ -60,5 +60,6 @@ mod p0287_find_the_duplicate_number;
 mod p0289_game_of_life;
 mod p0290_word_pattern;
 mod p0292_nim_game;
+mod p0295_find_median_from_data_stream;
 mod p0297_serialize_and_deserialize_binary_tree;
 mod p0300_longest_increasing_subsequence;
