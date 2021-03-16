@@ -3,3 +3,4 @@ mod util;
 mod archived;
 
 mod p0301_remove_invalid_parentheses;
+mod p0303_range_sum_query_immutable;
