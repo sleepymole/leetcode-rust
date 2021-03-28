@@ -17,3 +17,4 @@ mod p0319_bulb_switcher;
 mod p0326_power_of_three;
 mod p0327_count_of_range_sum;
 mod p0342_power_of_four;
+mod p0344_reverse_string;
