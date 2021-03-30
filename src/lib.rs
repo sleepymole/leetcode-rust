@@ -14,6 +14,7 @@ mod p0315_count_of_smaller_numbers_after_self;
 mod p0316_remove_duplicate_letters;
 mod p0318_maximum_product_of_word_lengths;
 mod p0319_bulb_switcher;
+mod p0321_create_maximum_number;
 mod p0326_power_of_three;
 mod p0327_count_of_range_sum;
 mod p0342_power_of_four;
