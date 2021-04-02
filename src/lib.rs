@@ -20,5 +20,6 @@ mod p0324_wiggle_sort_ii;
 mod p0326_power_of_three;
 mod p0327_count_of_range_sum;
 mod p0328_odd_even_linked_list;
+mod p0329_longest_increasing_path_in_a_matrix;
 mod p0342_power_of_four;
 mod p0344_reverse_string;
