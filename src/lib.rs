@@ -23,6 +23,7 @@ mod p0328_odd_even_linked_list;
 mod p0329_longest_increasing_path_in_a_matrix;
 mod p0330_patching_array;
 mod p0331_verify_preorder_serialization_of_a_binary_tree;
+mod p0332_reconstruct_itinerary;
 mod p0334_increasing_triplet_subsequence;
 mod p0342_power_of_four;
 mod p0344_reverse_string;
