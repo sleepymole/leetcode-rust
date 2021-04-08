@@ -28,3 +28,4 @@ mod p0334_increasing_triplet_subsequence;
 mod p0342_power_of_four;
 mod p0344_reverse_string;
 mod p0345_reverse_vowels_of_a_string;
+mod p0349_intersection_of_two_arrays;
