@@ -30,3 +30,4 @@ mod p0342_power_of_four;
 mod p0344_reverse_string;
 mod p0345_reverse_vowels_of_a_string;
 mod p0349_intersection_of_two_arrays;
+mod p0350_intersection_of_two_arrays_ii;
