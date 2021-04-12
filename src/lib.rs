@@ -29,6 +29,7 @@ mod p0335_self_crossing;
 mod p0336_palindrome_pairs;
 mod p0337_house_robber_iii;
 mod p0338_counting_bits;
+mod p0341_flatten_nested_list_iterator;
 mod p0342_power_of_four;
 mod p0344_reverse_string;
 mod p0345_reverse_vowels_of_a_string;
