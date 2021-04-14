@@ -34,5 +34,6 @@ mod p0342_power_of_four;
 mod p0343_integer_break;
 mod p0344_reverse_string;
 mod p0345_reverse_vowels_of_a_string;
+mod p0347_top_k_frequent_elements;
 mod p0349_intersection_of_two_arrays;
 mod p0350_intersection_of_two_arrays_ii;
