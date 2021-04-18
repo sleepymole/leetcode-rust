@@ -40,3 +40,5 @@ mod p0350_intersection_of_two_arrays_ii;
 mod p0352_data_stream_as_disjoint_intervals;
 mod p0354_russian_doll_envelopes;
 mod p0355_design_twitter;
+mod p0357_count_numbers_with_unique_digits;
+mod p0363_max_sum_of_rectangle_no_larger_than_k;
