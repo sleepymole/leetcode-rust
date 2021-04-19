@@ -43,3 +43,4 @@ mod p0355_design_twitter;
 mod p0357_count_numbers_with_unique_digits;
 mod p0363_max_sum_of_rectangle_no_larger_than_k;
 mod p0365_water_and_jug_problem;
+mod p0367_valid_perfect_square;
