@@ -47,3 +47,4 @@ mod p0367_valid_perfect_square;
 mod p0368_largest_divisible_subset;
 mod p0371_sum_of_two_integers;
 mod p0372_super_pow;
+mod p0373_find_k_pairs_with_smallest_sums;
