@@ -50,3 +50,4 @@ mod p0372_super_pow;
 mod p0373_find_k_pairs_with_smallest_sums;
 mod p0374_guess_number_higher_or_lower;
 mod p0391_perfect_rectangle;
+mod p0392_is_subsequence;
