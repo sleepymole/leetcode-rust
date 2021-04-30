@@ -52,6 +52,7 @@ mod p0374_guess_number_higher_or_lower;
 mod p0377_combination_sum_iv;
 mod p0383_ransom_note;
 mod p0384_shuffle_an_array;
+mod p0385_mini_parser;
 mod p0386_lexicographical_numbers;
 mod p0391_perfect_rectangle;
 mod p0392_is_subsequence;
