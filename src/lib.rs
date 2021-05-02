@@ -54,6 +54,7 @@ mod p0383_ransom_note;
 mod p0384_shuffle_an_array;
 mod p0385_mini_parser;
 mod p0386_lexicographical_numbers;
+mod p0387_first_unique_character_in_a_string;
 mod p0391_perfect_rectangle;
 mod p0392_is_subsequence;
 mod p0397_integer_replacement;
