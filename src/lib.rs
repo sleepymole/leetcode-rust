@@ -51,6 +51,7 @@ mod p0372_super_pow;
 mod p0373_find_k_pairs_with_smallest_sums;
 mod p0374_guess_number_higher_or_lower;
 mod p0375_guess_number_higher_or_lower_ii;
+mod p0376_wiggle_subsequence;
 mod p0377_combination_sum_iv;
 mod p0383_ransom_note;
 mod p0384_shuffle_an_array;
