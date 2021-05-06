@@ -54,6 +54,8 @@ mod p0375_guess_number_higher_or_lower_ii;
 mod p0376_wiggle_subsequence;
 mod p0377_combination_sum_iv;
 mod p0378_kth_smallest_element_in_a_sorted_matrix;
+mod p0380_insert_delete_getrandom_o1;
+mod p0381_insert_delete_getrandom_o1_duplicates_allowed;
 mod p0383_ransom_note;
 mod p0384_shuffle_an_array;
 mod p0385_mini_parser;
