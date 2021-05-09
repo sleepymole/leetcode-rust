@@ -69,5 +69,6 @@ mod p0391_perfect_rectangle;
 mod p0392_is_subsequence;
 mod p0393_utf_8_validation;
 mod p0394_decode_string;
+mod p0395_longest_substring_with_at_least_k_repeating_characters;
 mod p0397_integer_replacement;
 mod p0400_nth_digit;
