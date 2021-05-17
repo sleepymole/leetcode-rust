@@ -69,7 +69,7 @@ mod tests {
 
     #[test]
     fn test_is_additive_number() {
-        assert_eq!(Solution::is_additive_number("112358".to_owned()), true);
-        assert_eq!(Solution::is_additive_number("199100199".to_owned()), true);
+        assert!(Solution::is_additive_number("112358".to_owned()));
+        assert!(Solution::is_additive_number("199100199".to_owned()));
     }
 }

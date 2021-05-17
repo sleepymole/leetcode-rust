@@ -27,8 +27,8 @@ mod tests {
     use super::*;
     #[test]
     fn test_is_valid() {
-        assert_eq!(Solution::is_valid("()".to_owned()), true);
-        assert_eq!(Solution::is_valid("()[]{}".to_owned()), true);
-        assert_eq!(Solution::is_valid("(]".to_owned()), false);
+        assert!(Solution::is_valid("()".to_owned()));
+        assert!(Solution::is_valid("()[]{}".to_owned()));
+        assert!(!Solution::is_valid("(]".to_owned()));
     }
 }

@@ -78,6 +78,6 @@ mod tests {
         for l in board2.iter() {
             println!("{:?}", l);
         }
-        assert_eq!(p0036_valid_sudoku::Solution::is_valid_sudoku(board2), true);
+        assert!(p0036_valid_sudoku::Solution::is_valid_sudoku(board2));
     }
 }

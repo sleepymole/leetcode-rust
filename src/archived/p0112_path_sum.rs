@@ -37,9 +37,7 @@ mod tests {
 
     #[test]
     fn test_has_path_sum() {
-        assert_eq!(
-            Solution::has_path_sum(tree!(5, 4, 8, 11, null, 13, 4, 7, 2, null, 1), 22),
-            true
-        );
+        assert!(
+            Solution::has_path_sum(tree!(5, 4, 8, 11, null, 13, 4, 7, 2, null, 1), 22));
     }
 }

@@ -71,12 +71,12 @@ mod tests {
     fn test_wiggle_sort() {
         let mut nums = vec![1, 5, 1, 1, 6, 4];
         Solution::wiggle_sort(&mut nums);
-        assert_eq!(wiggle_sorted(&nums), true);
+        assert!(wiggle_sorted(&nums));
         let mut nums = vec![1, 3, 2, 2, 3, 1];
         Solution::wiggle_sort(&mut nums);
-        assert_eq!(wiggle_sorted(&nums), true);
+        assert!(wiggle_sorted(&nums));
         let mut nums = vec![5, 6, 1];
         Solution::wiggle_sort(&mut nums);
-        assert_eq!(wiggle_sorted(&nums), true);
+        assert!(wiggle_sorted(&nums));
     }
 }

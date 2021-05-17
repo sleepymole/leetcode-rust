@@ -130,7 +130,7 @@ mod tests {
         assert_eq!(iter.next(), 2);
         assert_eq!(iter.next(), 1);
         assert_eq!(iter.next(), 1);
-        assert_eq!(iter.has_next(), false);
+        assert!(!iter.has_next());
 
         let mut iter = NestedIterator::new(vec![
             NestedInteger::Int(1),
@@ -142,6 +142,6 @@ mod tests {
         assert_eq!(iter.next(), 1);
         assert_eq!(iter.next(), 4);
         assert_eq!(iter.next(), 6);
-        assert_eq!(iter.has_next(), false);
+        assert!(!iter.has_next());
     }
 }

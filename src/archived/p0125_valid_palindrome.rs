@@ -28,10 +28,9 @@ mod tests {
 
     #[test]
     fn test_is_palindrome() {
-        assert_eq!(
-            Solution::is_palindrome("A man, a plan, a canal: Panama".to_owned()),
-            true
-        );
-        assert_eq!(Solution::is_palindrome("race a car".to_owned()), false);
+        assert!(Solution::is_palindrome(
+            "A man, a plan, a canal: Panama".to_owned()
+        ));
+        assert!(!Solution::is_palindrome("race a car".to_owned()));
     }
 }

@@ -30,19 +30,15 @@ mod tests {
 
     #[test]
     fn test_search_matrix() {
-        assert_eq!(
+        assert!(
             Solution::search_matrix(
                 vec![vec![1, 3, 5, 7], vec![10, 11, 16, 20], vec![23, 30, 34, 50]],
                 3
-            ),
-            true
-        );
-        assert_eq!(
+            ));
+        assert!(!
             Solution::search_matrix(
                 vec![vec![1, 3, 5, 7], vec![10, 11, 16, 20], vec![23, 30, 34, 50]],
                 13
-            ),
-            false
-        );
+            ));
     }
 }

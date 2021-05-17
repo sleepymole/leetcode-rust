@@ -27,8 +27,8 @@ mod tests {
 
     #[test]
     fn test_my_pow() {
-        assert_eq!((Solution::my_pow(2.0, 10) - 1024.0).abs() < 1e-10, true);
-        assert_eq!((Solution::my_pow(2.1, 3) - 9.261).abs() < 1e-10, true);
-        assert_eq!((Solution::my_pow(2.0, -2) - 0.25).abs() < 1e-10, true);
+        assert!((Solution::my_pow(2.0, 10) - 1024.0).abs() < 1e-10);
+        assert!((Solution::my_pow(2.1, 3) - 9.261).abs() < 1e-10);
+        assert!((Solution::my_pow(2.0, -2) - 0.25).abs() < 1e-10);
     }
 }

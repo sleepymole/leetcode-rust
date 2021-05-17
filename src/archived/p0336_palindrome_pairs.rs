@@ -49,11 +49,9 @@ impl Trie {
                 return (matched, prefixed);
             }
         }
-        for c in &root.children {
-            if let Some(ref node) = c {
-                for &p in &node.prefixed {
-                    prefixed.push(p);
-                }
+        for node in root.children.iter().flatten() {
+            for &p in &node.prefixed {
+                prefixed.push(p);
             }
         }
 

@@ -50,9 +50,9 @@ mod tests {
 
     #[test]
     fn test_is_self_crossing() {
-        assert_eq!(Solution::is_self_crossing(vec![2, 1, 1, 2]), true);
-        assert_eq!(Solution::is_self_crossing(vec![1, 2, 3, 4]), false);
-        assert_eq!(Solution::is_self_crossing(vec![1, 1, 1, 1]), true);
-        assert_eq!(Solution::is_self_crossing(vec![1, 1, 2, 1, 1]), true);
+        assert!(Solution::is_self_crossing(vec![2, 1, 1, 2]));
+        assert!(!Solution::is_self_crossing(vec![1, 2, 3, 4]));
+        assert!(Solution::is_self_crossing(vec![1, 1, 1, 1]));
+        assert!(Solution::is_self_crossing(vec![1, 1, 2, 1, 1]));
     }
 }

@@ -11,18 +11,16 @@ impl Solution {
         if preorder.is_empty() {
             return None;
         }
-        if let Some(pos) = inorder.iter().position(|&x| x == preorder[0]) {
-            Some(Rc::new(RefCell::new(TreeNode {
+        inorder.iter().position(|&x| x == preorder[0]).map(|pos| {
+            Rc::new(RefCell::new(TreeNode {
                 val: preorder[0],
                 left: Solution::build_tree(preorder[1..=pos].to_vec(), inorder[0..pos].to_vec()),
                 right: Solution::build_tree(
                     preorder[pos + 1..].to_vec(),
                     inorder[pos + 1..].to_vec(),
                 ),
-            })))
-        } else {
-            None
-        }
+            }))
+        })
     }
 }
 

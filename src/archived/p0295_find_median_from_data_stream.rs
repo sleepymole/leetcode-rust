@@ -55,8 +55,8 @@ mod tests {
         let mut finder = MedianFinder::new();
         finder.add_num(1);
         finder.add_num(2);
-        assert_eq!((finder.find_median() - 1.5).abs() < f64::EPSILON, true);
+        assert!((finder.find_median() - 1.5).abs() < f64::EPSILON);
         finder.add_num(3);
-        assert_eq!((finder.find_median() - 2.0).abs() < f64::EPSILON, true);
+        assert!((finder.find_median() - 2.0).abs() < f64::EPSILON);
     }
 }

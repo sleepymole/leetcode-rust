@@ -11,8 +11,7 @@ impl Solution {
         for _ in 0..n / 2 {
             s.push(')');
         }
-        let mut ss: Vec<String> = Vec::new();
-        ss.push(s);
+        let mut ss = vec![s];
         loop {
             let bs = ss.last().unwrap().as_bytes();
             let (mut l, mut r) = (0, 0);

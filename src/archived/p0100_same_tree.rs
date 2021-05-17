@@ -33,14 +33,10 @@ mod tests {
 
     #[test]
     fn test_is_same_tree() {
-        assert_eq!(Solution::is_same_tree(tree!(1, 2, 3), tree!(1, 2, 3)), true);
-        assert_eq!(
-            Solution::is_same_tree(tree!(1, 2), tree!(1, null, 2)),
-            false
-        );
-        assert_eq!(
-            Solution::is_same_tree(tree!(1, 2, 1), tree!(1, 1, 2)),
-            false
-        );
+        assert!(Solution::is_same_tree(tree!(1, 2, 3), tree!(1, 2, 3)));
+        assert!(!
+            Solution::is_same_tree(tree!(1, 2), tree!(1, null, 2)));
+        assert!(!
+            Solution::is_same_tree(tree!(1, 2, 1), tree!(1, 1, 2)));
     }
 }

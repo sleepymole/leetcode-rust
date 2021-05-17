@@ -47,6 +47,6 @@ mod tests {
         q.push(2);
         assert_eq!(q.peek(), 1);
         assert_eq!(q.pop(), 1);
-        assert_eq!(q.empty(), false);
+        assert!(!q.empty());
     }
 }

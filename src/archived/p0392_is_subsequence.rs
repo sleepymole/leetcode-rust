@@ -26,13 +26,13 @@ mod tests {
 
     #[test]
     fn test_is_subsequence() {
-        assert_eq!(
-            Solution::is_subsequence("abc".to_owned(), "ahbgdc".to_owned()),
-            true
-        );
-        assert_eq!(
-            Solution::is_subsequence("axc".to_owned(), "ahbgdc".to_owned()),
-            false
-        );
+        assert!(Solution::is_subsequence(
+            "abc".to_owned(),
+            "ahbgdc".to_owned()
+        ));
+        assert!(!Solution::is_subsequence(
+            "axc".to_owned(),
+            "ahbgdc".to_owned()
+        ));
     }
 }

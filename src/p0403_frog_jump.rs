@@ -41,7 +41,7 @@ mod tests {
 
     #[test]
     fn test_can_cross() {
-        assert_eq!(Solution::can_cross(vec![0, 1, 3, 5, 6, 8, 12, 17]), true);
-        assert_eq!(Solution::can_cross(vec![0, 1, 2, 3, 4, 8, 9, 11]), false);
+        assert!(Solution::can_cross(vec![0, 1, 3, 5, 6, 8, 12, 17]));
+        assert!(!Solution::can_cross(vec![0, 1, 2, 3, 4, 8, 9, 11]));
     }
 }

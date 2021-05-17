@@ -33,14 +33,10 @@ mod tests {
 
     #[test]
     fn test_is_valid_serialization() {
-        assert_eq!(
-            Solution::is_valid_serialization("9,3,4,#,#,1,#,#,2,#,6,#,#".to_owned()),
-            true
-        );
-        assert_eq!(Solution::is_valid_serialization("1,#".to_owned()), false);
-        assert_eq!(
-            Solution::is_valid_serialization("9,#,#,1".to_owned()),
-            false
-        );
+        assert!(Solution::is_valid_serialization(
+            "9,3,4,#,#,1,#,#,2,#,6,#,#".to_owned()
+        ));
+        assert!(!Solution::is_valid_serialization("1,#".to_owned()));
+        assert!(!Solution::is_valid_serialization("9,#,#,1".to_owned()));
     }
 }

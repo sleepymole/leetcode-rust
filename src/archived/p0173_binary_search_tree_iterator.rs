@@ -53,12 +53,12 @@ mod tests {
         let mut iter = BSTIterator::new(tree!(7, 3, 15, null, null, 9, 20));
         assert_eq!(iter.next(), 3);
         assert_eq!(iter.next(), 7);
-        assert_eq!(iter.has_next(), true);
+        assert!(iter.has_next());
         assert_eq!(iter.next(), 9);
-        assert_eq!(iter.has_next(), true);
+        assert!(iter.has_next());
         assert_eq!(iter.next(), 15);
-        assert_eq!(iter.has_next(), true);
+        assert!(iter.has_next());
         assert_eq!(iter.next(), 20);
-        assert_eq!(iter.has_next(), false);
+        assert!(!iter.has_next());
     }
 }

@@ -35,7 +35,7 @@ mod tests {
             Solution::summary_ranges(vec![0, 2, 3, 4, 6, 8, 9]),
             vec!["0", "2->4", "6", "8->9"]
         );
-        assert_eq!(Solution::summary_ranges(vec![]).is_empty(), true);
+        assert!(Solution::summary_ranges(vec![]).is_empty());
         assert_eq!(Solution::summary_ranges(vec![-1]), vec!["-1".to_owned()]);
         assert_eq!(Solution::summary_ranges(vec![0]), vec!["0".to_owned()]);
     }

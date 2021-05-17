@@ -97,9 +97,6 @@ mod tests {
             sorted(Solution::add_operators("00".to_owned(), 0)),
             sorted(vec!["0+0".to_owned(), "0-0".to_owned(), "0*0".to_owned()])
         );
-        assert_eq!(
-            Solution::add_operators("3456237490".to_owned(), 9191).is_empty(),
-            true
-        );
+        assert!(Solution::add_operators("3456237490".to_owned(), 9191).is_empty());
     }
 }

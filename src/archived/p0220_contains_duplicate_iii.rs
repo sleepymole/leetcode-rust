@@ -31,25 +31,25 @@ mod tests {
 
     #[test]
     fn test_contains_nearby_almost_duplicate() {
-        assert_eq!(
-            Solution::contains_nearby_almost_duplicate(vec![1, 2, 3, 1], 3, 0),
-            true
-        );
-        assert_eq!(
-            Solution::contains_nearby_almost_duplicate(vec![1, 0, 1, 1], 1, 2),
-            true
-        );
-        assert_eq!(
-            Solution::contains_nearby_almost_duplicate(vec![1, 5, 9, 1, 5, 9], 2, 3),
-            false
-        );
-        assert_eq!(
-            Solution::contains_nearby_almost_duplicate(
-                vec![2147483647, -1, 2147483647],
-                1,
-                2147483647
-            ),
-            false
-        )
+        assert!(Solution::contains_nearby_almost_duplicate(
+            vec![1, 2, 3, 1],
+            3,
+            0
+        ));
+        assert!(Solution::contains_nearby_almost_duplicate(
+            vec![1, 0, 1, 1],
+            1,
+            2
+        ));
+        assert!(!Solution::contains_nearby_almost_duplicate(
+            vec![1, 5, 9, 1, 5, 9],
+            2,
+            3
+        ));
+        assert!(!Solution::contains_nearby_almost_duplicate(
+            vec![2147483647, -1, 2147483647],
+            1,
+            2147483647
+        ));
     }
 }

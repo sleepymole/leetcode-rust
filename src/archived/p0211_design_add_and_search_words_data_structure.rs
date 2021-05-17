@@ -61,9 +61,9 @@ mod tests {
         dict.add_word("bad".to_owned());
         dict.add_word("dad".to_owned());
         dict.add_word("mad".to_owned());
-        assert_eq!(dict.search("pad".to_owned()), false);
-        assert_eq!(dict.search("bad".to_owned()), true);
-        assert_eq!(dict.search(".ad".to_owned()), true);
-        assert_eq!(dict.search("b..".to_owned()), true);
+        assert!(!dict.search("pad".to_owned()));
+        assert!(dict.search("bad".to_owned()));
+        assert!(dict.search(".ad".to_owned()));
+        assert!(dict.search("b..".to_owned()));
     }
 }

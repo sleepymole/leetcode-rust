@@ -34,14 +34,12 @@ mod tests {
 
     #[test]
     fn test_find_median_sorted_arrays() {
-        assert_eq!(
-            (Solution::find_median_sorted_arrays(vec![1, 2], vec![2]) - 2.0).abs() < f64::EPSILON,
-            true
+        assert!(
+            (Solution::find_median_sorted_arrays(vec![1, 2], vec![2]) - 2.0).abs() < f64::EPSILON
         );
-        assert_eq!(
+        assert!(
             (Solution::find_median_sorted_arrays(vec![1, 2], vec![3, 4]) - 2.5).abs()
-                < f64::EPSILON,
-            true
-        )
+                < f64::EPSILON
+        );
     }
 }

@@ -11,21 +11,22 @@ impl Solution {
         if inorder.is_empty() {
             return None;
         }
-        if let Some(pos) = inorder
+        inorder
             .iter()
             .position(|&x| x == postorder[postorder.len() - 1])
-        {
-            Some(Rc::new(RefCell::new(TreeNode {
-                val: postorder[postorder.len() - 1],
-                left: Solution::build_tree(inorder[0..pos].to_vec(), postorder[0..pos].to_vec()),
-                right: Solution::build_tree(
-                    inorder[pos + 1..].to_vec(),
-                    postorder[pos..inorder.len() - 1].to_vec(),
-                ),
-            })))
-        } else {
-            None
-        }
+            .map(|pos| {
+                Rc::new(RefCell::new(TreeNode {
+                    val: postorder[postorder.len() - 1],
+                    left: Solution::build_tree(
+                        inorder[0..pos].to_vec(),
+                        postorder[0..pos].to_vec(),
+                    ),
+                    right: Solution::build_tree(
+                        inorder[pos + 1..].to_vec(),
+                        postorder[pos..inorder.len() - 1].to_vec(),
+                    ),
+                }))
+            })
     }
 }
 

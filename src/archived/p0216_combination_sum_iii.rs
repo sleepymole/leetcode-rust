@@ -40,8 +40,8 @@ mod tests {
             normalize(Solution::combination_sum3(3, 9)),
             vec![vec![1, 2, 6], vec![1, 3, 5], vec![2, 3, 4]]
         );
-        assert_eq!(Solution::combination_sum3(4, 1).is_empty(), true);
-        assert_eq!(Solution::combination_sum3(3, 2).is_empty(), true);
+        assert!(Solution::combination_sum3(4, 1).is_empty());
+        assert!(Solution::combination_sum3(3, 2).is_empty());
         assert_eq!(
             Solution::combination_sum3(9, 45),
             vec![vec![1, 2, 3, 4, 5, 6, 7, 8, 9]]

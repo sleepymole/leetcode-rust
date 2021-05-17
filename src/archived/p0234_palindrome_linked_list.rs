@@ -50,8 +50,8 @@ mod tests {
 
     #[test]
     fn test_is_palindrome() {
-        assert_eq!(Solution::is_palindrome(list!(1, 2)), false);
-        assert_eq!(Solution::is_palindrome(list!(1, 2, 2, 1)), true);
-        assert_eq!(Solution::is_palindrome(list!(1, 2, 3, 2, 1)), true);
+        assert!(!Solution::is_palindrome(list!(1, 2)));
+        assert!(Solution::is_palindrome(list!(1, 2, 2, 1)));
+        assert!(Solution::is_palindrome(list!(1, 2, 3, 2, 1)));
     }
 }

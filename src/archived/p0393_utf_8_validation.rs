@@ -35,7 +35,7 @@ mod tests {
 
     #[test]
     fn test_valid_utf8() {
-        assert_eq!(Solution::valid_utf8(vec![197, 130, 1]), true);
-        assert_eq!(Solution::valid_utf8(vec![235, 140, 4]), false);
+        assert!(Solution::valid_utf8(vec![197, 130, 1]));
+        assert!(!Solution::valid_utf8(vec![235, 140, 4]));
     }
 }

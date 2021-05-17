@@ -45,7 +45,7 @@ mod tests {
             rank[order[i] as usize] = i;
         }
         for p in preqs {
-            assert_eq!(rank[p[0] as usize] > rank[p[1] as usize], true);
+            assert!(rank[p[0] as usize] > rank[p[1] as usize]);
         }
     }
 

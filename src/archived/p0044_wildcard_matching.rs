@@ -34,16 +34,10 @@ mod tests {
 
     #[test]
     fn test_is_match() {
-        assert_eq!(Solution::is_match("aa".to_owned(), "a".to_owned()), false);
-        assert_eq!(Solution::is_match("aa".to_owned(), "*".to_owned()), true);
-        assert_eq!(Solution::is_match("cb".to_owned(), "?a".to_owned()), false);
-        assert_eq!(
-            Solution::is_match("adceb".to_owned(), "*a*b".to_owned()),
-            true
-        );
-        assert_eq!(
-            Solution::is_match("acdcb".to_owned(), "a*c?b".to_owned()),
-            false
-        )
+        assert!(!Solution::is_match("aa".to_owned(), "a".to_owned()));
+        assert!(Solution::is_match("aa".to_owned(), "*".to_owned()));
+        assert!(!Solution::is_match("cb".to_owned(), "?a".to_owned()));
+        assert!(Solution::is_match("adceb".to_owned(), "*a*b".to_owned()));
+        assert!(!Solution::is_match("acdcb".to_owned(), "a*c?b".to_owned()));
     }
 }

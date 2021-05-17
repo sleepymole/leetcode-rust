@@ -13,8 +13,8 @@ mod tests {
 
     #[test]
     fn test_can_win_nim() {
-        assert_eq!(Solution::can_win_nim(4), false);
-        assert_eq!(Solution::can_win_nim(1), true);
-        assert_eq!(Solution::can_win_nim(2), true);
+        assert!(!Solution::can_win_nim(4));
+        assert!(Solution::can_win_nim(1));
+        assert!(Solution::can_win_nim(2));
     }
 }

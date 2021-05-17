@@ -57,10 +57,10 @@ mod tests {
     fn test_trie() {
         let mut trie = Trie::new();
         trie.insert("apple".to_owned());
-        assert_eq!(trie.search("apple".to_owned()), true);
-        assert_eq!(trie.search("app".to_owned()), false);
-        assert_eq!(trie.starts_with("app".to_owned()), true);
+        assert!(trie.search("apple".to_owned()));
+        assert!(!trie.search("app".to_owned()));
+        assert!(trie.starts_with("app".to_owned()));
         trie.insert("app".to_owned());
-        assert_eq!(trie.search("app".to_owned()), true);
+        assert!(trie.search("app".to_owned()));
     }
 }

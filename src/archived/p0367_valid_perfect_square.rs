@@ -22,7 +22,7 @@ mod tests {
 
     #[test]
     fn test_is_perfect_square() {
-        assert_eq!(Solution::is_perfect_square(16), true);
-        assert_eq!(Solution::is_perfect_square(14), false);
+        assert!(Solution::is_perfect_square(16));
+        assert!(!Solution::is_perfect_square(14));
     }
 }

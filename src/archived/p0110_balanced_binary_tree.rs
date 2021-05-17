@@ -31,14 +31,10 @@ mod tests {
 
     #[test]
     fn test_is_balanced() {
-        assert_eq!(
-            Solution::is_balanced(tree!(3, 9, 20, null, null, 15, 7)),
-            true
-        );
-        assert_eq!(
-            Solution::is_balanced(tree!(1, 2, 2, 3, 3, null, null, 4, 4)),
-            false
-        );
-        assert_eq!(Solution::is_balanced(tree!()), true);
+        assert!(
+            Solution::is_balanced(tree!(3, 9, 20, null, null, 15, 7)));
+        assert!(!
+            Solution::is_balanced(tree!(1, 2, 2, 3, 3, null, null, 4, 4)));
+        assert!(Solution::is_balanced(tree!()));
     }
 }

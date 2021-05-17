@@ -59,10 +59,7 @@ mod tests {
             ans,
             vec!["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"]
         );
-        assert_eq!(
-            Solution::letter_combinations("".to_owned()).is_empty(),
-            true
-        );
+        assert!(Solution::letter_combinations("".to_owned()).is_empty());
         ans = Solution::letter_combinations("2".to_owned());
         ans.sort();
         assert_eq!(ans, vec!["a", "b", "c"]);

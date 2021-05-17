@@ -17,13 +17,10 @@ mod tests {
 
     #[test]
     fn test_is_anagram() {
-        assert_eq!(
-            Solution::is_anagram("anagram".to_owned(), "nagaram".to_owned()),
-            true
-        );
-        assert_eq!(
-            Solution::is_anagram("rat".to_owned(), "car".to_owned()),
-            false
-        );
+        assert!(Solution::is_anagram(
+            "anagram".to_owned(),
+            "nagaram".to_owned()
+        ));
+        assert!(!Solution::is_anagram("rat".to_owned(), "car".to_owned()));
     }
 }

@@ -99,13 +99,10 @@ mod tests {
             ),
             vec!["eat".to_owned(), "oath".to_owned()]
         );
-        assert_eq!(
-            Solution::find_words(
-                vec![vec!['a', 'b'], vec!['c', 'd']],
-                vec!["abcb".to_owned()]
-            )
-            .is_empty(),
-            true
-        );
+        assert!(Solution::find_words(
+            vec![vec!['a', 'b'], vec!['c', 'd']],
+            vec!["abcb".to_owned()]
+        )
+        .is_empty());
     }
 }

@@ -12,8 +12,7 @@ impl Solution {
             return vec![];
         }
         let mut orders = Vec::new();
-        let mut stk = Vec::new();
-        stk.push(root.as_ref().unwrap().clone());
+        let mut stk = vec![root.as_ref().unwrap().clone()];
         let mut to_right = true;
         while !stk.is_empty() {
             let mut order = Vec::new();

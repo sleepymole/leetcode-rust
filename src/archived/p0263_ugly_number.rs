@@ -28,8 +28,8 @@ mod tests {
 
     #[test]
     fn test_is_ugly() {
-        assert_eq!(Solution::is_ugly(6), true);
-        assert_eq!(Solution::is_ugly(8), true);
-        assert_eq!(Solution::is_ugly(14), false);
+        assert!(Solution::is_ugly(6));
+        assert!(Solution::is_ugly(8));
+        assert!(!Solution::is_ugly(14));
     }
 }

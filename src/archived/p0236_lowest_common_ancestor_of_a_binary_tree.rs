@@ -7,7 +7,7 @@ use std::cell::RefCell;
 use std::rc::Rc;
 
 enum Res {
-    LCA(Option<Rc<RefCell<TreeNode>>>),
+    Lca(Option<Rc<RefCell<TreeNode>>>),
     Child(i32),
 }
 
@@ -18,11 +18,11 @@ impl Solution {
         }
         let mut count = 0;
         match Solution::dfs(root.as_ref().unwrap().borrow().left.clone(), pval, qval) {
-            Res::LCA(lca) => return Res::LCA(lca),
+            Res::Lca(lca) => return Res::Lca(lca),
             Res::Child(n) => count += n,
         }
         match Solution::dfs(root.as_ref().unwrap().borrow().right.clone(), pval, qval) {
-            Res::LCA(lca) => return Res::LCA(lca),
+            Res::Lca(lca) => return Res::Lca(lca),
             Res::Child(n) => count += n,
         }
         let root_val = root.as_ref().unwrap().borrow().val;
@@ -30,7 +30,7 @@ impl Solution {
             count += 1;
         }
         if count == 2 {
-            Res::LCA(root)
+            Res::Lca(root)
         } else {
             Res::Child(count)
         }
@@ -41,7 +41,7 @@ impl Solution {
         p: Option<Rc<RefCell<TreeNode>>>,
         q: Option<Rc<RefCell<TreeNode>>>,
     ) -> Option<Rc<RefCell<TreeNode>>> {
-        if let Res::LCA(lca) = Solution::dfs(
+        if let Res::Lca(lca) = Solution::dfs(
             root,
             p.as_ref().unwrap().borrow().val,
             q.as_ref().unwrap().borrow().val,

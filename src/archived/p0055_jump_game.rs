@@ -20,7 +20,7 @@ mod tests {
 
     #[test]
     fn test_can_jump() {
-        assert_eq!(Solution::can_jump(vec![2, 3, 1, 1, 4]), true);
-        assert_eq!(Solution::can_jump(vec![3, 2, 1, 0, 4]), false);
+        assert!(Solution::can_jump(vec![2, 3, 1, 1, 4]));
+        assert!(!Solution::can_jump(vec![3, 2, 1, 0, 4]));
     }
 }

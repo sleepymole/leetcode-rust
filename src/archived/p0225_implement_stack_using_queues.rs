@@ -46,6 +46,6 @@ mod tests {
         stk.push(2);
         assert_eq!(stk.top(), 2);
         assert_eq!(stk.pop(), 2);
-        assert_eq!(stk.empty(), false);
+        assert!(!stk.empty());
     }
 }

@@ -48,29 +48,25 @@ mod tests {
 
     #[test]
     fn test_is_interleave() {
-        assert_eq!(
-            Solution::is_interleave(
-                "aabcc".to_owned(),
-                "dbbca".to_owned(),
-                "aadbbcbcac".to_owned()
-            ),
-            true
-        );
-        assert_eq!(
-            Solution::is_interleave(
-                "aabcc".to_owned(),
-                "dbbca".to_owned(),
-                "aadbbbaccc".to_owned()
-            ),
-            false
-        );
-        assert_eq!(
-            Solution::is_interleave("".to_owned(), "".to_owned(), "".to_owned()),
-            true
-        );
-        assert_eq!(
-            Solution::is_interleave("db".to_owned(), "b".to_owned(), "cbb".to_owned()),
-            false
-        );
+        assert!(Solution::is_interleave(
+            "aabcc".to_owned(),
+            "dbbca".to_owned(),
+            "aadbbcbcac".to_owned()
+        ));
+        assert!(!Solution::is_interleave(
+            "aabcc".to_owned(),
+            "dbbca".to_owned(),
+            "aadbbbaccc".to_owned()
+        ));
+        assert!(Solution::is_interleave(
+            "".to_owned(),
+            "".to_owned(),
+            "".to_owned()
+        ));
+        assert!(!Solution::is_interleave(
+            "db".to_owned(),
+            "b".to_owned(),
+            "cbb".to_owned()
+        ));
     }
 }

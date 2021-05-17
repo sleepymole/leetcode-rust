@@ -36,21 +36,17 @@ mod tests {
 
     #[test]
     fn test_word_break() {
-        assert_eq!(
+        assert!(
             Solution::word_break(
                 "leetcode".to_owned(),
                 vec!["leet".to_owned(), "code".to_owned()]
-            ),
-            true
-        );
-        assert_eq!(
+            ));
+        assert!(
             Solution::word_break(
                 "applepenapple".to_owned(),
                 vec!["apple".to_owned(), "pen".to_owned()]
-            ),
-            true
-        );
-        assert_eq!(
+            ));
+        assert!(!
             Solution::word_break(
                 "catsandog".to_owned(),
                 vec![
@@ -60,8 +56,6 @@ mod tests {
                     "and".to_owned(),
                     "cat".to_owned()
                 ]
-            ),
-            false
-        );
+            ));
     }
 }

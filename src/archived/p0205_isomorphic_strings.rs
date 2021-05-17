@@ -35,17 +35,11 @@ mod tests {
 
     #[test]
     fn test_is_isomorphic() {
-        assert_eq!(
-            Solution::is_isomorphic("egg".to_owned(), "add".to_owned()),
-            true
-        );
-        assert_eq!(
-            Solution::is_isomorphic("foo".to_owned(), "bar".to_owned()),
-            false
-        );
-        assert_eq!(
-            Solution::is_isomorphic("paper".to_owned(), "title".to_owned()),
-            true
-        );
+        assert!(Solution::is_isomorphic("egg".to_owned(), "add".to_owned()));
+        assert!(!Solution::is_isomorphic("foo".to_owned(), "bar".to_owned()));
+        assert!(Solution::is_isomorphic(
+            "paper".to_owned(),
+            "title".to_owned()
+        ));
     }
 }

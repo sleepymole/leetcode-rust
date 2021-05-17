@@ -25,21 +25,21 @@ mod tests {
 
     #[test]
     fn test_word_pattern() {
-        assert_eq!(
-            Solution::word_pattern("abba".to_owned(), "dog cat cat dog".to_owned()),
-            true
-        );
-        assert_eq!(
-            Solution::word_pattern("abba".to_owned(), "dog cat cat fish".to_owned()),
-            false
-        );
-        assert_eq!(
-            Solution::word_pattern("aaaa".to_owned(), "dog cat cat dog".to_owned()),
-            false
-        );
-        assert_eq!(
-            Solution::word_pattern("abba".to_owned(), "dog dog dog dog".to_owned()),
-            false
-        );
+        assert!(Solution::word_pattern(
+            "abba".to_owned(),
+            "dog cat cat dog".to_owned()
+        ));
+        assert!(!Solution::word_pattern(
+            "abba".to_owned(),
+            "dog cat cat fish".to_owned()
+        ));
+        assert!(!Solution::word_pattern(
+            "aaaa".to_owned(),
+            "dog cat cat dog".to_owned()
+        ));
+        assert!(!Solution::word_pattern(
+            "abba".to_owned(),
+            "dog dog dog dog".to_owned()
+        ));
     }
 }

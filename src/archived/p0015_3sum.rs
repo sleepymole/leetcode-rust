@@ -67,8 +67,8 @@ mod tests {
             Solution::three_sum(vec![-1, 0, 1, 2, -1, -4]),
             brute_force(vec![-1, 0, 1, 2, -1, -4])
         );
-        assert_eq!(Solution::three_sum(vec![]).is_empty(), true);
-        assert_eq!(Solution::three_sum(vec![0]).is_empty(), true);
+        assert!(Solution::three_sum(vec![]).is_empty());
+        assert!(Solution::three_sum(vec![0]).is_empty());
         assert_eq!(
             Solution::three_sum(vec![3, 0, -2, -1, 1, 2]),
             brute_force(vec![3, 0, -2, -1, 1, 2])

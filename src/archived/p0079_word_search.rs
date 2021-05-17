@@ -77,7 +77,7 @@ mod tests {
 
     #[test]
     fn test_exist() {
-        assert_eq!(
+        assert!(
             Solution::exist(
                 vec![
                     vec!['A', 'B', 'C', 'E'],
@@ -85,10 +85,8 @@ mod tests {
                     vec!['A', 'D', 'E', 'E']
                 ],
                 "ABCCED".to_owned()
-            ),
-            true
-        );
-        assert_eq!(
+            ));
+        assert!(
             Solution::exist(
                 vec![
                     vec!['A', 'B', 'C', 'E'],
@@ -96,10 +94,8 @@ mod tests {
                     vec!['A', 'D', 'E', 'E']
                 ],
                 "SEE".to_owned()
-            ),
-            true
-        );
-        assert_eq!(
+            ));
+        assert!(!
             Solution::exist(
                 vec![
                     vec!['A', 'B', 'C', 'E'],
@@ -107,8 +103,6 @@ mod tests {
                     vec!['A', 'D', 'E', 'E']
                 ],
                 "ABCB".to_owned()
-            ),
-            false
-        );
+            ));
     }
 }
