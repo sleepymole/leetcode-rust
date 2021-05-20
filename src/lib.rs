@@ -12,5 +12,6 @@ mod p0407_trapping_rain_water_ii;
 mod p0409_longest_palindrome;
 mod p0410_split_array_largest_sum;
 mod p0412_fizz_buzz;
+mod p0413_arithmetic_slices;
 mod p0414_third_maximum_number;
 mod p0415_add_strings;
