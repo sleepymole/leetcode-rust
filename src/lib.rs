@@ -15,3 +15,4 @@ mod p0412_fizz_buzz;
 mod p0413_arithmetic_slices;
 mod p0414_third_maximum_number;
 mod p0415_add_strings;
+mod p0416_partition_equal_subset_sum;
