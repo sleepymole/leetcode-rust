@@ -50,8 +50,7 @@ mod tests {
     #[test]
     fn test_is_valid_bst() {
         assert!(Solution::is_valid_bst(tree!(2, 1, 3)));
-        assert!(!
-            Solution::is_valid_bst(tree!(5, 1, 4, null, null, 3, 6)));
+        assert!(!Solution::is_valid_bst(tree!(5, 1, 4, null, null, 3, 6)));
         assert!(!Solution::is_valid_bst(tree!(5, 4, 6, null, null, 3)));
     }
 }

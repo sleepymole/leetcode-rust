@@ -55,11 +55,10 @@ mod tests {
             normalize(Solution::combination_sum2(vec![2, 5, 2, 1, 2], 5)),
             normalize(vec![vec![1, 2, 2], vec![5]])
         );
-        assert!(
-            Solution::combination_sum2(
-                vec![1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-                27
-            )
-            .is_empty());
+        assert!(Solution::combination_sum2(
+            vec![1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+            27
+        )
+        .is_empty());
     }
 }

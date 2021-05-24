@@ -54,9 +54,10 @@ mod tests {
         assert!(!Solution::is_match("aa".to_owned(), "a".to_owned()));
         assert!(Solution::is_match("aa".to_owned(), "a*".to_owned()));
         assert!(Solution::is_match("ab".to_owned(), ".*".to_owned()));
-        assert!(
-            Solution::is_match("aab".to_owned(), "c*a*b".to_owned()));
-        assert!(!
-            Solution::is_match("mississippi".to_owned(), "mis*is*p*.".to_owned()));
+        assert!(Solution::is_match("aab".to_owned(), "c*a*b".to_owned()));
+        assert!(!Solution::is_match(
+            "mississippi".to_owned(),
+            "mis*is*p*.".to_owned()
+        ));
     }
 }

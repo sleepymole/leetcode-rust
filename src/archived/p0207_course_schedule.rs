@@ -40,7 +40,9 @@ mod tests {
     fn test_can_finish() {
         assert!(Solution::can_finish(2, vec![vec![1, 0]]));
         assert!(!Solution::can_finish(2, vec![vec![1, 0], vec![0, 1]]));
-        assert!(!
-            Solution::can_finish(3, vec![vec![1, 0], vec![1, 2], vec![0, 1]]));
+        assert!(!Solution::can_finish(
+            3,
+            vec![vec![1, 0], vec![1, 2], vec![0, 1]]
+        ));
     }
 }

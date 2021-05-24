@@ -41,7 +41,6 @@ mod tests {
         assert_eq!(Solution::majority_element(vec![3, 2, 3]), vec![3]);
         assert_eq!(Solution::majority_element(vec![1]), vec![1]);
         assert_eq!(Solution::majority_element(vec![1, 2]), vec![1, 2]);
-        assert!(
-            Solution::majority_element(vec![1, 2, 3, 4]).is_empty());
+        assert!(Solution::majority_element(vec![1, 2, 3, 4]).is_empty());
     }
 }

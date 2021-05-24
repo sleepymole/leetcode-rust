@@ -37,7 +37,6 @@ mod tests {
     #[test]
     fn test_is_symmetric() {
         assert!(Solution::is_symmetric(tree!(1, 2, 2, 3, 4, 4, 3)));
-        assert!(!
-            Solution::is_symmetric(tree!(1, 2, 2, null, 3, null, 3)));
+        assert!(!Solution::is_symmetric(tree!(1, 2, 2, null, 3, null, 3)));
     }
 }

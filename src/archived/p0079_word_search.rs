@@ -77,32 +77,29 @@ mod tests {
 
     #[test]
     fn test_exist() {
-        assert!(
-            Solution::exist(
-                vec![
-                    vec!['A', 'B', 'C', 'E'],
-                    vec!['S', 'F', 'C', 'S'],
-                    vec!['A', 'D', 'E', 'E']
-                ],
-                "ABCCED".to_owned()
-            ));
-        assert!(
-            Solution::exist(
-                vec![
-                    vec!['A', 'B', 'C', 'E'],
-                    vec!['S', 'F', 'C', 'S'],
-                    vec!['A', 'D', 'E', 'E']
-                ],
-                "SEE".to_owned()
-            ));
-        assert!(!
-            Solution::exist(
-                vec![
-                    vec!['A', 'B', 'C', 'E'],
-                    vec!['S', 'F', 'C', 'S'],
-                    vec!['A', 'D', 'E', 'E']
-                ],
-                "ABCB".to_owned()
-            ));
+        assert!(Solution::exist(
+            vec![
+                vec!['A', 'B', 'C', 'E'],
+                vec!['S', 'F', 'C', 'S'],
+                vec!['A', 'D', 'E', 'E']
+            ],
+            "ABCCED".to_owned()
+        ));
+        assert!(Solution::exist(
+            vec![
+                vec!['A', 'B', 'C', 'E'],
+                vec!['S', 'F', 'C', 'S'],
+                vec!['A', 'D', 'E', 'E']
+            ],
+            "SEE".to_owned()
+        ));
+        assert!(!Solution::exist(
+            vec![
+                vec!['A', 'B', 'C', 'E'],
+                vec!['S', 'F', 'C', 'S'],
+                vec!['A', 'D', 'E', 'E']
+            ],
+            "ABCB".to_owned()
+        ));
     }
 }
