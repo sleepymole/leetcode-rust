@@ -8,11 +8,9 @@ impl Solution {
         for c in s.chars() {
             if c == ' ' {
                 inword = false;
-            } else {
-                if !inword {
-                    segs += 1;
-                    inword = true;
-                }
+            } else if !inword {
+                segs += 1;
+                inword = true;
             }
         }
         segs
