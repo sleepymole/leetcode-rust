@@ -19,4 +19,5 @@ mod p0416_partition_equal_subset_sum;
 mod p0417_pacific_atlantic_water_flow;
 mod p0419_battleships_in_a_board;
 mod p0420_strong_password_checker;
+mod p0421_maximum_xor_of_two_numbers_in_an_array;
 mod p0434_number_of_segments_in_a_string;
