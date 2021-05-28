@@ -21,4 +21,5 @@ mod p0419_battleships_in_a_board;
 mod p0420_strong_password_checker;
 mod p0421_maximum_xor_of_two_numbers_in_an_array;
 mod p0423_reconstruct_original_digits_from_english;
+mod p0424_longest_repeating_character_replacement;
 mod p0434_number_of_segments_in_a_string;
