@@ -25,7 +25,7 @@ impl Solution {
         let mut cindex: HashMap<char, Vec<usize>> = HashMap::new();
         for i in 0..10 {
             for c in words[i].chars() {
-                cindex.entry(c).or_insert(Vec::new()).push(i);
+                cindex.entry(c).or_insert_with(Vec::new).push(i);
             }
         }
         let mut nums = Vec::new();

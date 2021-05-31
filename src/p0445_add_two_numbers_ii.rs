@@ -1,4 +1,5 @@
 #![allow(dead_code)]
+#![allow(clippy::borrowed_box)]
 pub struct Solution;
 
 use crate::util::ListNode;
