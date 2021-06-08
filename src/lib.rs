@@ -25,6 +25,7 @@ mod p0424_longest_repeating_character_replacement;
 mod p0432_all_oone_data_structure;
 mod p0433_minimum_genetic_mutation;
 mod p0434_number_of_segments_in_a_string;
+mod p0435_non_overlapping_intervals;
 mod p0440_k_th_smallest_in_lexicographical_order;
 mod p0441_arranging_coins;
 mod p0442_find_all_duplicates_in_an_array;
