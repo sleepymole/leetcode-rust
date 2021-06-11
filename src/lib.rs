@@ -28,6 +28,7 @@ mod p0434_number_of_segments_in_a_string;
 mod p0435_non_overlapping_intervals;
 mod p0436_find_right_interval;
 mod p0437_path_sum_iii;
+mod p0438_find_all_anagrams_in_a_string;
 mod p0440_k_th_smallest_in_lexicographical_order;
 mod p0441_arranging_coins;
 mod p0442_find_all_duplicates_in_an_array;
