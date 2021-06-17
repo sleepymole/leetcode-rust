@@ -22,30 +22,26 @@ impl Solution {
         root: Option<Rc<RefCell<TreeNode>>>,
         key: i32,
     ) -> Option<Rc<RefCell<TreeNode>>> {
-        if root.is_none() {
-            return None;
-        }
+        root.as_ref()?;
         let node = root.as_ref().unwrap();
         if key < node.borrow().val {
             let left = node.borrow().left.clone();
             node.borrow_mut().left = Solution::delete_node(left, key);
-            return root;
+            root
         } else if key > node.borrow().val {
             let right = node.borrow().right.clone();
             node.borrow_mut().right = Solution::delete_node(right, key);
-            return root;
+            root
+        } else if node.borrow().right.is_none() {
+            return node.borrow().left.clone();
+        } else if node.borrow().left.is_none() {
+            return node.borrow().right.clone();
         } else {
-            if node.borrow().right.is_none() {
-                return node.borrow().left.clone();
-            } else if node.borrow().left.is_none() {
-                return node.borrow().right.clone();
-            } else {
-                let min = Solution::find_min(node.borrow().right.as_ref().unwrap().clone());
-                node.borrow_mut().val = min;
-                let right = node.borrow().right.clone();
-                node.borrow_mut().right = Solution::delete_node(right, min);
-                return root;
-            }
+            let min = Solution::find_min(node.borrow().right.as_ref().unwrap().clone());
+            node.borrow_mut().val = min;
+            let right = node.borrow().right.clone();
+            node.borrow_mut().right = Solution::delete_node(right, min);
+            root
         }
     }
 }
