@@ -44,4 +44,5 @@ mod p0452_minimum_number_of_arrows_to_burst_balloons;
 mod p0453_minimum_moves_to_equal_array_elements;
 mod p0454_4sum_ii;
 mod p0456_132_pattern;
+mod p0457_circular_array_loop;
 mod p0461_hamming_distance;
