@@ -45,4 +45,5 @@ mod p0453_minimum_moves_to_equal_array_elements;
 mod p0454_4sum_ii;
 mod p0456_132_pattern;
 mod p0457_circular_array_loop;
+mod p0458_poor_pigs;
 mod p0461_hamming_distance;
