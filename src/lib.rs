@@ -55,4 +55,5 @@ mod p0464_can_i_win;
 mod p0466_count_the_repetitions;
 mod p0467_unique_substrings_in_wraparound_string;
 mod p0468_validate_ip_address;
+mod p0470_implement_rand10_using_rand7;
 mod p0476_number_complement;
