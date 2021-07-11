@@ -13,11 +13,9 @@ impl Solution {
             let mut j = 0;
             while i < l1 && j < s2.len() {
                 if s1[i % s1.len()] == s2[j] {
-                    i += 1;
                     j += 1;
-                } else {
-                    i += 1;
                 }
+                i += 1;
             }
             if j < s2.len() {
                 break;
