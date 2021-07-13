@@ -58,6 +58,7 @@ mod p0468_validate_ip_address;
 mod p0470_implement_rand10_using_rand7;
 mod p0472_concatenated_words;
 mod p0473_matchsticks_to_square;
+mod p0474_ones_and_zeroes;
 mod p0476_number_complement;
 mod p0477_total_hamming_distance;
 mod p0479_largest_palindrome_product;
