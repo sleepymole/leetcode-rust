@@ -1,6 +1,7 @@
 #[macro_use]
 mod util;
 mod archived;
+mod templates;
 
 mod p0401_binary_watch;
 mod p0402_remove_k_digits;
@@ -62,5 +63,6 @@ mod p0474_ones_and_zeroes;
 mod p0475_heaters;
 mod p0476_number_complement;
 mod p0477_total_hamming_distance;
+mod p0478_generate_random_point_in_a_circle;
 mod p0479_largest_palindrome_product;
 mod p0485_max_consecutive_ones;
