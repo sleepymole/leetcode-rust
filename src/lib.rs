@@ -65,4 +65,5 @@ mod p0476_number_complement;
 mod p0477_total_hamming_distance;
 mod p0478_generate_random_point_in_a_circle;
 mod p0479_largest_palindrome_product;
+mod p0480_sliding_window_median;
 mod p0485_max_consecutive_ones;
