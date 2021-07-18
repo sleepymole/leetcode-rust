@@ -67,3 +67,4 @@ mod p0478_generate_random_point_in_a_circle;
 mod p0479_largest_palindrome_product;
 mod p0480_sliding_window_median;
 mod p0485_max_consecutive_ones;
+mod p0496_next_greater_element_i;
