@@ -3,12 +3,7 @@ pub struct Solution;
 
 impl Solution {
     pub fn license_key_formatting(s: String, k: i32) -> String {
-        let s: Vec<char> = s
-            .to_uppercase()
-            .to_owned()
-            .chars()
-            .filter(|&c| c != '-')
-            .collect();
+        let s: Vec<char> = s.to_uppercase().chars().filter(|&c| c != '-').collect();
         let k = k as usize;
         let first = s.len() % k;
         let mut res = String::new();
