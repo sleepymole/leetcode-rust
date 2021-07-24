@@ -70,5 +70,6 @@ mod p0481_magical_string;
 mod p0482_license_key_formatting;
 mod p0483_smallest_good_base;
 mod p0485_max_consecutive_ones;
+mod p0486_predict_the_winner;
 mod p0492_construct_the_rectangle;
 mod p0496_next_greater_element_i;
