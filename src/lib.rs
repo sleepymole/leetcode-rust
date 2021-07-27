@@ -74,4 +74,5 @@ mod p0486_predict_the_winner;
 mod p0488_zuma_game;
 mod p0491_increasing_subsequences;
 mod p0492_construct_the_rectangle;
+mod p0493_reverse_pairs;
 mod p0496_next_greater_element_i;
