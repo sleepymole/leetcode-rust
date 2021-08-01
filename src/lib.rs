@@ -78,3 +78,4 @@ mod p0493_reverse_pairs;
 mod p0494_target_sum;
 mod p0495_teemo_attacking;
 mod p0496_next_greater_element_i;
+mod p0497_random_point_in_non_overlapping_rectangles;
