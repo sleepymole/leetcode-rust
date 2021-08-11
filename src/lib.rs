@@ -8,3 +8,4 @@ mod p0502_ipo;
 mod p0503_next_greater_element_ii;
 mod p0504_base_7;
 mod p0506_relative_ranks;
+mod p0507_perfect_number;
