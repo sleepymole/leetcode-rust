@@ -9,3 +9,5 @@ mod p0503_next_greater_element_ii;
 mod p0504_base_7;
 mod p0506_relative_ranks;
 mod p0507_perfect_number;
+mod p0508_most_frequent_subtree_sum;
+mod p0509_fibonacci_number;
