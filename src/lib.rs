@@ -11,3 +11,6 @@ mod p0506_relative_ranks;
 mod p0507_perfect_number;
 mod p0508_most_frequent_subtree_sum;
 mod p0509_fibonacci_number;
+mod p0513_find_bottom_left_tree_value;
+mod p0514_freedom_trail;
+mod p0515_find_largest_value_in_each_tree_row;
