@@ -19,3 +19,6 @@ mod p0517_super_washing_machines;
 mod p0518_coin_change_2;
 mod p0519_random_flip_matrix;
 mod p0520_detect_capital;
+mod p0521_longest_uncommon_subsequence_i;
+mod p0522_longest_uncommon_subsequence_ii;
+mod p0523_continuous_subarray_sum;
