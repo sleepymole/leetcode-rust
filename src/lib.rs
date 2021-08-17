@@ -22,3 +22,6 @@ mod p0520_detect_capital;
 mod p0521_longest_uncommon_subsequence_i;
 mod p0522_longest_uncommon_subsequence_ii;
 mod p0523_continuous_subarray_sum;
+mod p0524_longest_word_in_dictionary_through_deleting;
+mod p0525_contiguous_array;
+mod p0526_beautiful_arrangement;
