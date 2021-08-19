@@ -26,3 +26,4 @@ mod p0524_longest_word_in_dictionary_through_deleting;
 mod p0525_contiguous_array;
 mod p0526_beautiful_arrangement;
 mod p0528_random_pick_with_weight;
+mod p0529_minesweeper;
