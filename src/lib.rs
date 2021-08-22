@@ -29,4 +29,5 @@ mod p0528_random_pick_with_weight;
 mod p0529_minesweeper;
 mod p0530_minimum_absolute_difference_in_bst;
 mod p0532_k_diff_pairs_in_an_array;
+mod p0535_encode_and_decode_tinyurl;
 mod p0541_reverse_string_ii;
