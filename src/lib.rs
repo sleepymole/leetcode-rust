@@ -31,4 +31,5 @@ mod p0530_minimum_absolute_difference_in_bst;
 mod p0532_k_diff_pairs_in_an_array;
 mod p0535_encode_and_decode_tinyurl;
 mod p0537_complex_number_multiplication;
+mod p0538_convert_bst_to_greater_tree;
 mod p0541_reverse_string_ii;
