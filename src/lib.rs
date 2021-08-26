@@ -35,3 +35,5 @@ mod p0538_convert_bst_to_greater_tree;
 mod p0539_minimum_time_difference;
 mod p0540_single_element_in_a_sorted_array;
 mod p0541_reverse_string_ii;
+mod p0542_01_matrix;
+mod p0543_diameter_of_binary_tree;
