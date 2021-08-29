@@ -51,3 +51,6 @@ mod p0563_binary_tree_tilt;
 mod p0564_find_the_closest_palindrome;
 mod p0565_array_nesting;
 mod p0566_reshape_the_matrix;
+mod p0567_permutation_in_string;
+mod p0572_subtree_of_another_tree;
+mod p0575_distribute_candies;
