@@ -54,3 +54,4 @@ mod p0566_reshape_the_matrix;
 mod p0567_permutation_in_string;
 mod p0572_subtree_of_another_tree;
 mod p0575_distribute_candies;
+mod p0576_out_of_boundary_paths;
