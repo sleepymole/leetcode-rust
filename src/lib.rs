@@ -55,3 +55,5 @@ mod p0567_permutation_in_string;
 mod p0572_subtree_of_another_tree;
 mod p0575_distribute_candies;
 mod p0576_out_of_boundary_paths;
+mod p0581_shortest_unsorted_continuous_subarray;
+mod p0583_delete_operation_for_two_strings;
