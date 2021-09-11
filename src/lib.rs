@@ -58,3 +58,4 @@ mod p0576_out_of_boundary_paths;
 mod p0581_shortest_unsorted_continuous_subarray;
 mod p0583_delete_operation_for_two_strings;
 mod p0587_erect_the_fence;
+mod p0591_tag_validator;
