@@ -9,7 +9,7 @@ impl Solution {
         for &c in &candy_type {
             s.insert(c);
         }
-        s.iter().count().min(candy_type.len() / 2) as i32
+        s.len().min(candy_type.len() / 2) as i32
     }
 }
 
