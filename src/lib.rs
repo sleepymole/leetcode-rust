@@ -60,3 +60,4 @@ mod p0583_delete_operation_for_two_strings;
 mod p0587_erect_the_fence;
 mod p0591_tag_validator;
 mod p0592_fraction_addition_and_subtraction;
+mod p0593_valid_square;
