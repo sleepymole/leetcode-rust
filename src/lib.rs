@@ -61,3 +61,7 @@ mod p0587_erect_the_fence;
 mod p0591_tag_validator;
 mod p0592_fraction_addition_and_subtraction;
 mod p0593_valid_square;
+mod p0594_longest_harmonious_subsequence;
+mod p0598_range_addition_ii;
+mod p0599_minimum_index_sum_of_two_lists;
+mod p0600_non_negative_integers_without_consecutive_ones;
