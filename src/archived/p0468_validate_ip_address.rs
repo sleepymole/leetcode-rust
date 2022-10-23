@@ -37,9 +37,10 @@ impl Solution {
 
     pub fn valid_ip_address(ip: String) -> String {
         let ip: Vec<char> = ip.chars().collect();
-        if ip.iter().all(|&c| c.is_digit(10) || c == '.') && Solution::valid_ipv4(&ip) {
+        if ip.iter().all(|&c| c.is_ascii_digit() || c == '.') && Solution::valid_ipv4(&ip) {
             return "IPv4".to_owned();
-        } else if ip.iter().all(|&c| c.is_digit(16) || c == ':') && Solution::valid_ipv6(&ip) {
+        } else if ip.iter().all(|&c| c.is_ascii_hexdigit() || c == ':') && Solution::valid_ipv6(&ip)
+        {
             return "IPv6".to_owned();
         }
         "Neither".to_owned()

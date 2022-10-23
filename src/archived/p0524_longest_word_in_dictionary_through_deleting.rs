@@ -6,7 +6,7 @@ impl Solution {
         let mut b = b.chars();
         for c1 in a.chars() {
             let mut matched = false;
-            while let Some(c2) = b.next() {
+            for c2 in b.by_ref() {
                 if c1 == c2 {
                     matched = true;
                     break;

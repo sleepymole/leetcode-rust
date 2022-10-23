@@ -22,7 +22,7 @@ impl Solution {
             }
             res = res.max(r)
         }
-        res as i32
+        res
     }
 }
 

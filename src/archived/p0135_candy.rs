@@ -24,7 +24,7 @@ impl Solution {
                 sum += nums[i];
             }
         }
-        sum as i32
+        sum
     }
 }
 

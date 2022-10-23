@@ -19,7 +19,7 @@ impl Solution {
             stream.next();
         }
         while let Some(&c) = stream.peek() {
-            if !c.is_digit(10) {
+            if !c.is_ascii_digit() {
                 break;
             }
             num = num * 10 + c as i32 - '0' as i32;

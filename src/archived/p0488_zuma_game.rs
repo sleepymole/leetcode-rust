@@ -51,7 +51,7 @@ impl Solution {
                 for j in i..board.len() {
                     v.push(board[j])
                 }
-                let step = Solution::search_min_step(v, &hand, used | (1 << u), cache);
+                let step = Solution::search_min_step(v, hand, used | (1 << u), cache);
                 if step != -1 {
                     if min_step == -1 {
                         min_step = step + 1;

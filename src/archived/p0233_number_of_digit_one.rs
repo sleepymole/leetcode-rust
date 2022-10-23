@@ -4,7 +4,7 @@ pub struct Solution {}
 impl Solution {
     pub fn count_digit_one(n: i32) -> i32 {
         if n < 10 {
-            return if n >= 1 { 1 } else { 0 };
+            return i32::from(n >= 1);
         }
         let mut q = n / 10;
         let r = n % 10;

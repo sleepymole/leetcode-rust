@@ -37,7 +37,7 @@ impl MedianFinder {
         if self.left.len() > self.right.len() {
             *self.left.peek().unwrap() as f64
         } else if self.left.len() < self.right.len() {
-            (*self.right.peek().unwrap()).0 as f64
+            self.right.peek().unwrap().0 as f64
         } else if let (Some(&l), Some(&Reverse(r))) = (self.left.peek(), self.right.peek()) {
             (l + r) as f64 / 2.0
         } else {

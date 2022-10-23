@@ -11,7 +11,7 @@ impl Solution {
             let mut depth = 0;
             let mut len = 0;
             let mut has_dot = false;
-            while let Some(c) = chars.next() {
+            for c in chars.by_ref() {
                 if c == '\n' {
                     break;
                 }

@@ -24,7 +24,7 @@ impl Solution {
             }
             let mut dot_found = false;
             for i in cur_pos..epos {
-                if !s[i].is_digit(10) {
+                if !s[i].is_ascii_digit() {
                     if s[i] != '.' || dot_found {
                         return false;
                     }
@@ -47,7 +47,7 @@ impl Solution {
                 return false;
             }
             for i in epos..s.len() {
-                if !s[i].is_digit(10) {
+                if !s[i].is_ascii_digit() {
                     return false;
                 }
             }

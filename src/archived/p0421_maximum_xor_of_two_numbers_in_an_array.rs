@@ -19,13 +19,7 @@ impl Solution {
         let mut res = 0;
         let mut first = true;
 
-        let is_set = |x: i32, i: i32| {
-            if x & (1 << i) == 0 {
-                0
-            } else {
-                1
-            }
-        };
+        let is_set = |x: i32, i: i32| usize::from(x & (1 << i) != 0);
 
         for x in nums {
             let mut root = 0;

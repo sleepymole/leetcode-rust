@@ -37,7 +37,7 @@ impl Solution {
 
     pub fn remove_boxes(boxes: Vec<i32>) -> i32 {
         let mut cache = HashMap::new();
-        Solution::dp(0, boxes.len() as i8 - 1, 1, &boxes, &mut cache) as i32
+        Solution::dp(0, boxes.len() as i8 - 1, 1, &boxes, &mut cache)
     }
 }
 

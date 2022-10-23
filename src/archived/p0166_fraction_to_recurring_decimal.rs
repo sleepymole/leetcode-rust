@@ -26,7 +26,7 @@ impl Solution {
         while p != 0 && !m.contains_key(&p) {
             m.insert(p, pos);
             p *= 10;
-            ans.push(char::from_digit((p / q).abs() as u32, 10).unwrap());
+            ans.push(char::from_digit((p / q).unsigned_abs() as u32, 10).unwrap());
             p %= q;
             pos += 1;
         }

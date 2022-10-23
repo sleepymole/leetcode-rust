@@ -12,7 +12,7 @@ impl Solution {
             let key: String = chars.into_iter().collect();
             m.entry(key).or_insert_with(Vec::new).push(s);
         }
-        m.into_iter().map(|(_, v)| v).collect()
+        m.into_values().collect()
     }
 }
 

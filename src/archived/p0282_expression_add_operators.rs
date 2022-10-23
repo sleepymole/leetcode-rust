@@ -24,9 +24,9 @@ impl Solution {
             let mut j = i;
             while j < expr.len() && expr[j] != '+' && expr[j] != '-' {
                 if expr[j] == '0'
-                    && (j == i || !expr[j - 1].is_digit(10))
+                    && (j == i || !expr[j - 1].is_ascii_digit())
                     && j + 1 < expr.len()
-                    && expr[j + 1].is_digit(10)
+                    && expr[j + 1].is_ascii_digit()
                 {
                     return false;
                 }

@@ -4,7 +4,7 @@ pub struct Solution;
 use std::collections::HashSet;
 
 impl Solution {
-    fn search(w: &Vec<char>, matched: usize, s: &HashSet<&str>, words: &Vec<String>) -> bool {
+    fn search(w: &Vec<char>, matched: usize, s: &HashSet<&str>) -> bool {
         if matched == w.len() {
             return true;
         }
@@ -14,7 +14,7 @@ impl Solution {
                 break;
             }
             sw.push(w[i]);
-            if s.contains(sw.as_str()) && Solution::search(w, matched + sw.len(), s, words) {
+            if s.contains(sw.as_str()) && Solution::search(w, matched + sw.len(), s) {
                 return true;
             }
         }
@@ -30,7 +30,7 @@ impl Solution {
         let mut res = Vec::new();
         for sw in &words {
             let w = sw.chars().collect();
-            if Solution::search(&w, 0, &s, &words) {
+            if Solution::search(&w, 0, &s) {
                 res.push(sw.clone());
             }
         }

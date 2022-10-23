@@ -8,7 +8,7 @@ impl Solution {
     fn parse_num(stream: &mut Peekable<Chars>) -> i32 {
         let mut num = 0;
         while let Some(&c) = stream.peek() {
-            if !c.is_digit(10) {
+            if !c.is_ascii_digit() {
                 break;
             }
             num = num * 10 + c as i32 - '0' as i32;
@@ -26,7 +26,7 @@ impl Solution {
             if c == ']' {
                 break;
             };
-            if c.is_digit(10) {
+            if c.is_ascii_digit() {
                 let n = Solution::parse_num(stream);
                 assert_eq!(Some('['), stream.next());
                 let ss = Solution::parse_string(stream);
