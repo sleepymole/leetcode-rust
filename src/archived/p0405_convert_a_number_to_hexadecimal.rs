@@ -4,7 +4,7 @@ pub struct Solution;
 
 impl Solution {
     pub fn to_hex(num: i32) -> String {
-        format!("{:x}", num)
+        format!("{num:x}")
     }
 }
 

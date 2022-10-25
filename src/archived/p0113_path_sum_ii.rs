@@ -16,7 +16,7 @@ impl Solution {
         let root_val = root.as_ref().unwrap().borrow().val;
         let sum = sum - root_val;
         path.push(root_val);
-        println!("{} {:?}", root_val, path);
+        println!("{root_val} {path:?}");
         let left = root.as_ref().unwrap().borrow().left.clone();
         let right = root.as_ref().unwrap().borrow().right.clone();
         if left.is_none() && right.is_none() {

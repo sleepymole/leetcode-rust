@@ -76,7 +76,7 @@ mod tests {
             }
         }
         for l in board2.iter() {
-            println!("{:?}", l);
+            println!("{l:?}");
         }
         assert!(p0036_valid_sudoku::Solution::is_valid_sudoku(board2));
     }

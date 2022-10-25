@@ -19,7 +19,7 @@ impl Solution {
         for i in 0..12 {
             for j in 0..60 {
                 if Solution::count_bits(i) + Solution::count_bits(j) == turned_on {
-                    times.push(format!("{}:{:02}", i, j));
+                    times.push(format!("{i}:{j:02}"));
                 }
             }
         }
