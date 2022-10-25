@@ -1,0 +1,16 @@
+query QuestionData($titleSlug: String!) {
+  question(titleSlug: $titleSlug) {
+    questionId
+    questionFrontendId
+    title
+    titleSlug
+    content
+    codeSnippets {
+      lang
+      langSlug
+      code
+    }
+    sampleTestCase
+    metaData
+  }
+}

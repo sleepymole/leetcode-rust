@@ -1,0 +1,60 @@
+schema {
+  query: Query
+}
+
+type TopicTag {
+  name: String!
+  id: ID!
+  slug: String!
+}
+
+type Question {
+  acRate: Float!
+  difficulty: String!
+  freqBar: String
+  questionFrontendId: String!
+  isFavor: Boolean!
+  isPaidOnly: Boolean!
+  status: String
+  title: String!
+  titleSlug: String!
+  topicTags: [TopicTag]
+  hasSolution: Boolean!
+  hasVideoSolution: Boolean!
+}
+
+type QuestionList {
+  totalNum: Int!
+  data: [Question!]!
+}
+
+input QuestionListFilterInput {
+  tags: [String!]
+}
+
+type CodeSnippet {
+  lang: String!
+  langSlug: String!
+  code: String!
+}
+
+type QuestionData {
+  questionId: String!
+  questionFrontendId: String!
+  title: String!
+  titleSlug: String!
+  content: String!
+  codeSnippets: [CodeSnippet!]!
+  sampleTestCase: String!
+  metaData: String!
+}
+
+type Query {
+  questionList(
+    categorySlug: String
+    limit: Int
+    skip: Int
+    filter: QuestionListFilterInput
+  ): QuestionList!
+  question(titleSlug: String!): QuestionData!
+}
