@@ -444,3 +444,5 @@ mod s0598_range_addition_ii;
 mod s0599_minimum_index_sum_of_two_lists;
 mod s0600_non_negative_integers_without_consecutive_ones;
 mod s0605_can_place_flowers;
+mod s0606_construct_string_from_binary_tree;
+mod s0609_find_duplicate_file_in_system;
