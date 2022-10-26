@@ -208,14 +208,11 @@ fn init_solution(question_id: i64, force: bool) -> Result<(), anyhow::Error> {
     }
 
     let filename = format!(
-        "p{:04}_{}.rs",
+        "s{:04}_{}.rs",
         question_id,
         question.title_slug.replace('-', "_")
     );
-    if !force
-        && (std::path::Path::new(&format!("src/{filename}")).exists()
-            || std::path::Path::new(&format!("src/archived/{filename}")).exists())
-    {
+    if !force && std::path::Path::new(&format!("src/solutions/{filename}")).exists() {
         bail!("solution already exists");
     }
 
@@ -255,7 +252,7 @@ fn init_solution(question_id: i64, force: bool) -> Result<(), anyhow::Error> {
 
     // Write solution file
     {
-        let mut file = std::fs::File::create(format!("src/{filename}"))?;
+        let mut file = std::fs::File::create(format!("src/solutions/{filename}"))?;
         file.write_all("#![allow(dead_code)]\npub struct Solution {}\n\n".as_bytes())?;
 
         if metadata.params.iter().any(|p| p.type_.has_list_node())
@@ -297,16 +294,16 @@ fn init_solution(question_id: i64, force: bool) -> Result<(), anyhow::Error> {
         file.sync_all()?;
     }
 
-    // Add solution module to lib.rs
+    // Add solution module to mod.rs
     {
         let mut file = std::fs::OpenOptions::new()
             .read(true)
             .write(true)
-            .open("src/lib.rs")?;
+            .open("src/solutions/mod.rs")?;
         let mut content = String::new();
         file.read_to_string(&mut content)?;
         let mod_name = format!(
-            "p{:04}_{}",
+            "s{:04}_{}",
             question_id,
             question.title_slug.replace('-', "_")
         );
@@ -316,9 +313,9 @@ fn init_solution(question_id: i64, force: bool) -> Result<(), anyhow::Error> {
         }
     }
 
-    println!("Solution is initialized at src/{}", filename);
+    println!("Solution is initialized at src/solutions/{}", filename);
     println!(
-        "Problem link: https://leetcode.com/problems/{}/",
+        "Question link: https://leetcode.com/problems/{}/",
         question.title_slug
     );
     Ok(())

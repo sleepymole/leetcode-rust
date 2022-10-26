@@ -51,7 +51,7 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use super::*;
-    use crate::archived::p0036_valid_sudoku;
+    use crate::solutions::s0036_valid_sudoku;
 
     #[test]
     fn test_solve_sudoku() {
@@ -78,6 +78,6 @@ mod tests {
         for l in board2.iter() {
             println!("{l:?}");
         }
-        assert!(p0036_valid_sudoku::Solution::is_valid_sudoku(board2));
+        assert!(s0036_valid_sudoku::Solution::is_valid_sudoku(board2));
     }
 }
