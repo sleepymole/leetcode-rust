@@ -474,8 +474,10 @@ dependencies = [
  "anyhow",
  "clap",
  "graphql_client",
+ "heck",
  "reqwest",
  "serde",
+ "serde_json",
 ]
 
 [[package]]
