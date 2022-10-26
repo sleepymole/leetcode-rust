@@ -16,8 +16,7 @@ ALLOWED_CLIPPY_LINTS:= \
 CLIPPY_FLAG=--workspace --all-targets --tests
 
 clippy:
-	cargo +nightly clippy ${CLIPPY_FLAG} --fix --allow-dirty --allow-staged -Z unstable-options -- ${ALLOWED_CLIPPY_LINTS}
-	cargo +nightly clippy ${CLIPPY_FLAG} --no-default-features -- ${ALLOWED_CLIPPY_LINTS}
+	cargo clippy ${CLIPPY_FLAG} --fix --allow-dirty --allow-staged -- ${ALLOWED_CLIPPY_LINTS}
 
 clean:
 	cargo clean
